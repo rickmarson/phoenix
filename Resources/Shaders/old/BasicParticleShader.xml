@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShaderPackage name="BasicParticleShader">
+	<profile target="glsl" version="4"> 
+		<uniform>mMV</uniform>
+		<uniform>mProj</uniform>
+		<uniform>vDiffuseColor</uniform>
+		<program name="BasicParticleProg">
+			<vs>BasicParticle.vs</vs>
+			<fs>BasicParticle.fs</fs>
+			<gs>BasicParticle.gs</gs>
+		</program>
+		<technique name="BasicParticleShader">
+			<pass number="0">BasicParticleProg</pass>
+		</technique>
+	</profile>
+	<profile target="d3d9" version="2">
+		<uniform>mMV</uniform>
+		<uniform>mProj</uniform>
+		<uniform>vDiffuseColor</uniform>
+		<fx binary="true">BasicParticle.fxo</fx>
+	</profile>
+	<profile target="d3d11" version="5">
+		<uniform>mMV</uniform>
+		<uniform>mProj</uniform>
+		<uniform>vDiffuseColor</uniform>
+		<program name="BasicParticleProg">
+			<vs>BasicParticle.cso</vs>
+			<fs>BasicParticle.cso</fs>
+			<gs>BasicParticle.cso</gs>
+		</program>
+		<technique name="BasicParticleShader">
+			<pass number="0">BasicParticleProg</pass>
+		</technique>
+	</profile>
+</ShaderPackage>

@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		301F9AA51A90CBB900880CD5 /* libNyx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301F9AA01A90C9FC00880CD5 /* libNyx.a */; };
+		304C992C1B6695A800F515E4 /* SDL2.framework in Copy SDL Framework */ = {isa = PBXBuildFile; fileRef = 307B008E1B64F53A00BFAF42 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3070FE041DD75D9E00789E7C /* marble_texture4662.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE031DD75D9E00789E7C /* marble_texture4662.jpg */; };
+		3070FE281DD75DB200789E7C /* Basic.shader in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE051DD75DB200789E7C /* Basic.shader */; };
+		3070FE291DD75DB200789E7C /* BasicParticle.shader in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE061DD75DB200789E7C /* BasicParticle.shader */; };
+		3070FE2A1DD75DB200789E7C /* CubeMapReflection.shader in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE071DD75DB200789E7C /* CubeMapReflection.shader */; };
+		3070FE2B1DD75DB200789E7C /* Flat.shader in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE081DD75DB200789E7C /* Flat.shader */; };
+		3070FE2C1DD75DB200789E7C /* BasicParticleShader.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE0A1DD75DB200789E7C /* BasicParticleShader.xml */; };
+		3070FE2D1DD75DB200789E7C /* BasicShader.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE0B1DD75DB200789E7C /* BasicShader.xml */; };
+		3070FE2E1DD75DB200789E7C /* FlatShader.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE0C1DD75DB200789E7C /* FlatShader.xml */; };
+		3070FE2F1DD75DB200789E7C /* BasicParticle.fs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE0E1DD75DB200789E7C /* BasicParticle.fs */; };
+		3070FE301DD75DB200789E7C /* BasicParticle.gs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE0F1DD75DB200789E7C /* BasicParticle.gs */; };
+		3070FE311DD75DB200789E7C /* BasicParticle.vs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE101DD75DB200789E7C /* BasicParticle.vs */; };
+		3070FE321DD75DB200789E7C /* BasicShader.fs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE111DD75DB200789E7C /* BasicShader.fs */; };
+		3070FE331DD75DB200789E7C /* BasicShader.vs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE121DD75DB200789E7C /* BasicShader.vs */; };
+		3070FE341DD75DB200789E7C /* CubeMapReflection.fs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE131DD75DB200789E7C /* CubeMapReflection.fs */; };
+		3070FE351DD75DB200789E7C /* CubeMapReflection.vs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE141DD75DB200789E7C /* CubeMapReflection.vs */; };
+		3070FE361DD75DB200789E7C /* FlatShader.fs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE151DD75DB200789E7C /* FlatShader.fs */; };
+		3070FE371DD75DB200789E7C /* FlatShader.vs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE161DD75DB200789E7C /* FlatShader.vs */; };
+		3070FE381DD75DB200789E7C /* SkyBox.fs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE171DD75DB200789E7C /* SkyBox.fs */; };
+		3070FE391DD75DB200789E7C /* SkyBox.vs in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE181DD75DB200789E7C /* SkyBox.vs */; };
+		3070FE3A1DD75DB200789E7C /* BasicShader.fx in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE1A1DD75DB200789E7C /* BasicShader.fx */; };
+		3070FE3B1DD75DB200789E7C /* FlatPixelShader.hlsl in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE1B1DD75DB200789E7C /* FlatPixelShader.hlsl */; };
+		3070FE3C1DD75DB200789E7C /* FlatShader.fx in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE1C1DD75DB200789E7C /* FlatShader.fx */; };
+		3070FE3D1DD75DB200789E7C /* FlatVertexShader.hlsl in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE1D1DD75DB200789E7C /* FlatVertexShader.hlsl */; };
+		3070FE3E1DD75DB200789E7C /* BasicShader.fx in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE1F1DD75DB200789E7C /* BasicShader.fx */; };
+		3070FE3F1DD75DB200789E7C /* FlatShader - Copia.fx in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE201DD75DB200789E7C /* FlatShader - Copia.fx */; };
+		3070FE401DD75DB200789E7C /* FlatShader.cod in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE211DD75DB200789E7C /* FlatShader.cod */; };
+		3070FE411DD75DB200789E7C /* FlatShader.fx in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE221DD75DB200789E7C /* FlatShader.fx */; };
+		3070FE421DD75DB200789E7C /* FlatShader.fxo in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE231DD75DB200789E7C /* FlatShader.fxo */; };
+		3070FE431DD75DB200789E7C /* ReflectionShader.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE241DD75DB200789E7C /* ReflectionShader.xml */; };
+		3070FE441DD75DB200789E7C /* SkyBoxShader.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE251DD75DB200789E7C /* SkyBoxShader.xml */; };
+		3070FE451DD75DB200789E7C /* SkyBox.shader in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE261DD75DB200789E7C /* SkyBox.shader */; };
+		3070FE461DD75DB200789E7C /* UIShader.shader in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE271DD75DB200789E7C /* UIShader.shader */; };
+		3070FE491DD75DBF00789E7C /* Marble.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE471DD75DBF00789E7C /* Marble.mtl */; };
+		3070FE4A1DD75DBF00789E7C /* Marble.obj in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE481DD75DBF00789E7C /* Marble.obj */; };
+		3070FE571DEF446100789E7C /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE531DEF446100789E7C /* config.json */; };
+		3070FE581DEF446100789E7C /* particle test.json in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE541DEF446100789E7C /* particle test.json */; };
+		3070FE591DEF446100789E7C /* physics test.json in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE551DEF446100789E7C /* physics test.json */; };
+		3070FE5A1DEF446100789E7C /* space scene.json in Resources */ = {isa = PBXBuildFile; fileRef = 3070FE561DEF446100789E7C /* space scene.json */; };
+		307B008F1B64F53A00BFAF42 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307B008E1B64F53A00BFAF42 /* SDL2.framework */; };
+		307B00A01B651E2E00BFAF42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 307B009F1B651E2E00BFAF42 /* Info.plist */; };
+		307B00A21B651EF400BFAF42 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307B00A11B651EF400BFAF42 /* CoreFoundation.framework */; };
+		307B00A61B651F6000BFAF42 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307B00A51B651F6000BFAF42 /* Cocoa.framework */; };
+		307B00A81B651F9500BFAF42 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307B00A71B651F9500BFAF42 /* IOKit.framework */; };
+		307FEAD31B75211200A96DB8 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307FEAD21B75211100A96DB8 /* SDL2_ttf.framework */; };
+		307FEAD41B75218B00A96DB8 /* SDL2_ttf.framework in Copy SDL Framework */ = {isa = PBXBuildFile; fileRef = 307FEAD21B75211100A96DB8 /* SDL2_ttf.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		309CA39A1A90C8540004B9DE /* demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 309CA3931A90C8540004B9DE /* demo.cpp */; };
+		309CA39B1A90C8540004B9DE /* particle_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 309CA3941A90C8540004B9DE /* particle_test.cpp */; };
+		309CA39C1A90C8540004B9DE /* physics_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 309CA3961A90C8540004B9DE /* physics_test.cpp */; };
+		309CA39D1A90C8540004B9DE /* space_scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 309CA3981A90C8540004B9DE /* space_scene.cpp */; };
+		309CA3A21A90C88E0004B9DE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309CA3A11A90C88E0004B9DE /* OpenGL.framework */; };
+		309CA3A41A90C89A0004B9DE /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309CA3A31A90C89A0004B9DE /* OpenCL.framework */; };
+		30A80D311B01002F0052A45C /* particle_fountain.cl in Sources */ = {isa = PBXBuildFile; fileRef = 30A80D041B01002F0052A45C /* particle_fountain.cl */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		301F9A9F1A90C9FC00880CD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301F9A9B1A90C9FC00880CD5 /* Nyx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 309CA2A01A90C6440004B9DE;
+			remoteInfo = Nyx;
+		};
+		301F9AA31A90CBB400880CD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301F9A9B1A90C9FC00880CD5 /* Nyx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 309CA29F1A90C6440004B9DE;
+			remoteInfo = Nyx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		304C992B1B66959500F515E4 /* Copy SDL Framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				304C992C1B6695A800F515E4 /* SDL2.framework in Copy SDL Framework */,
+				307FEAD41B75218B00A96DB8 /* SDL2_ttf.framework in Copy SDL Framework */,
+			);
+			name = "Copy SDL Framework";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		301F9A9B1A90C9FC00880CD5 /* Nyx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nyx.xcodeproj; path = ../../../../Nyx/Projects/osx/Nyx.xcodeproj; sourceTree = "<group>"; };
+		3070FE031DD75D9E00789E7C /* marble_texture4662.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marble_texture4662.jpg; sourceTree = "<group>"; };
+		3070FE051DD75DB200789E7C /* Basic.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Basic.shader; sourceTree = "<group>"; };
+		3070FE061DD75DB200789E7C /* BasicParticle.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BasicParticle.shader; sourceTree = "<group>"; };
+		3070FE071DD75DB200789E7C /* CubeMapReflection.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubeMapReflection.shader; sourceTree = "<group>"; };
+		3070FE081DD75DB200789E7C /* Flat.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Flat.shader; sourceTree = "<group>"; };
+		3070FE0A1DD75DB200789E7C /* BasicParticleShader.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BasicParticleShader.xml; sourceTree = "<group>"; };
+		3070FE0B1DD75DB200789E7C /* BasicShader.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BasicShader.xml; sourceTree = "<group>"; };
+		3070FE0C1DD75DB200789E7C /* FlatShader.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FlatShader.xml; sourceTree = "<group>"; };
+		3070FE0E1DD75DB200789E7C /* BasicParticle.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicParticle.fs; sourceTree = "<group>"; };
+		3070FE0F1DD75DB200789E7C /* BasicParticle.gs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicParticle.gs; sourceTree = "<group>"; };
+		3070FE101DD75DB200789E7C /* BasicParticle.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicParticle.vs; sourceTree = "<group>"; };
+		3070FE111DD75DB200789E7C /* BasicShader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicShader.fs; sourceTree = "<group>"; };
+		3070FE121DD75DB200789E7C /* BasicShader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicShader.vs; sourceTree = "<group>"; };
+		3070FE131DD75DB200789E7C /* CubeMapReflection.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CubeMapReflection.fs; sourceTree = "<group>"; };
+		3070FE141DD75DB200789E7C /* CubeMapReflection.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CubeMapReflection.vs; sourceTree = "<group>"; };
+		3070FE151DD75DB200789E7C /* FlatShader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FlatShader.fs; sourceTree = "<group>"; };
+		3070FE161DD75DB200789E7C /* FlatShader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FlatShader.vs; sourceTree = "<group>"; };
+		3070FE171DD75DB200789E7C /* SkyBox.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SkyBox.fs; sourceTree = "<group>"; };
+		3070FE181DD75DB200789E7C /* SkyBox.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SkyBox.vs; sourceTree = "<group>"; };
+		3070FE1A1DD75DB200789E7C /* BasicShader.fx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BasicShader.fx; sourceTree = "<group>"; };
+		3070FE1B1DD75DB200789E7C /* FlatPixelShader.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlatPixelShader.hlsl; sourceTree = "<group>"; };
+		3070FE1C1DD75DB200789E7C /* FlatShader.fx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlatShader.fx; sourceTree = "<group>"; };
+		3070FE1D1DD75DB200789E7C /* FlatVertexShader.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlatVertexShader.hlsl; sourceTree = "<group>"; };
+		3070FE1F1DD75DB200789E7C /* BasicShader.fx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BasicShader.fx; sourceTree = "<group>"; };
+		3070FE201DD75DB200789E7C /* FlatShader - Copia.fx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "FlatShader - Copia.fx"; sourceTree = "<group>"; };
+		3070FE211DD75DB200789E7C /* FlatShader.cod */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlatShader.cod; sourceTree = "<group>"; };
+		3070FE221DD75DB200789E7C /* FlatShader.fx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlatShader.fx; sourceTree = "<group>"; };
+		3070FE231DD75DB200789E7C /* FlatShader.fxo */ = {isa = PBXFileReference; lastKnownFileType = file; path = FlatShader.fxo; sourceTree = "<group>"; };
+		3070FE241DD75DB200789E7C /* ReflectionShader.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ReflectionShader.xml; sourceTree = "<group>"; };
+		3070FE251DD75DB200789E7C /* SkyBoxShader.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SkyBoxShader.xml; sourceTree = "<group>"; };
+		3070FE261DD75DB200789E7C /* SkyBox.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkyBox.shader; sourceTree = "<group>"; };
+		3070FE271DD75DB200789E7C /* UIShader.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UIShader.shader; sourceTree = "<group>"; };
+		3070FE471DD75DBF00789E7C /* Marble.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Marble.mtl; sourceTree = "<group>"; };
+		3070FE481DD75DBF00789E7C /* Marble.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Marble.obj; sourceTree = "<group>"; };
+		3070FE531DEF446100789E7C /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../../Data/config.json; sourceTree = "<group>"; };
+		3070FE541DEF446100789E7C /* particle test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "particle test.json"; path = "../../Data/particle test.json"; sourceTree = "<group>"; };
+		3070FE551DEF446100789E7C /* physics test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "physics test.json"; path = "../../Data/physics test.json"; sourceTree = "<group>"; };
+		3070FE561DEF446100789E7C /* space scene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "space scene.json"; path = "../../Data/space scene.json"; sourceTree = "<group>"; };
+		307B008E1B64F53A00BFAF42 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../thirdparty/OSX/SDL2.framework; sourceTree = "<group>"; };
+		307B009F1B651E2E00BFAF42 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		307B00A11B651EF400BFAF42 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		307B00A31B651F1E00BFAF42 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		307B00A51B651F6000BFAF42 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		307B00A71B651F9500BFAF42 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		307FEAD21B75211100A96DB8 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../thirdparty/OSX/SDL2_ttf.framework; sourceTree = "<group>"; };
+		309CA2701A90C5DA0004B9DE /* PhoenixDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoenixDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		309CA3921A90C8540004B9DE /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../config.h; sourceTree = "<group>"; };
+		309CA3931A90C8540004B9DE /* demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = demo.cpp; path = ../../demo.cpp; sourceTree = "<group>"; };
+		309CA3941A90C8540004B9DE /* particle_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = particle_test.cpp; path = ../../particle_test.cpp; sourceTree = "<group>"; };
+		309CA3951A90C8540004B9DE /* particle_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = particle_test.h; path = ../../particle_test.h; sourceTree = "<group>"; };
+		309CA3961A90C8540004B9DE /* physics_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = physics_test.cpp; path = ../../physics_test.cpp; sourceTree = "<group>"; };
+		309CA3971A90C8540004B9DE /* physics_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = physics_test.h; path = ../../physics_test.h; sourceTree = "<group>"; };
+		309CA3981A90C8540004B9DE /* space_scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = space_scene.cpp; path = ../../space_scene.cpp; sourceTree = "<group>"; };
+		309CA3991A90C8540004B9DE /* space_scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = space_scene.h; path = ../../space_scene.h; sourceTree = "<group>"; };
+		309CA3A11A90C88E0004B9DE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		309CA3A31A90C89A0004B9DE /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		30A80D041B01002F0052A45C /* particle_fountain.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = particle_fountain.cl; sourceTree = "<group>"; };
+		30A80D061B01002F0052A45C /* Cube.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cube.mtl; sourceTree = "<group>"; };
+		30A80D071B01002F0052A45C /* Cube.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cube.obj; sourceTree = "<group>"; };
+		30A80D081B01002F0052A45C /* Mars.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mars.mtl; sourceTree = "<group>"; };
+		30A80D091B01002F0052A45C /* Mars.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mars.obj; sourceTree = "<group>"; };
+		30A80D0A1B01002F0052A45C /* Particle1.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Particle1.mtl; sourceTree = "<group>"; };
+		30A80D0C1B01002F0052A45C /* camera_anim.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = camera_anim.lua; sourceTree = "<group>"; };
+		30A80D0D1B01002F0052A45C /* particle_fountain.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = particle_fountain.lua; sourceTree = "<group>"; };
+		30A80D291B01002F0052A45C /* MarsElevation_2500x1250.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarsElevation_2500x1250.jpg; sourceTree = "<group>"; };
+		30A80D2A1B01002F0052A45C /* MarsMap_2500x1250.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarsMap_2500x1250.jpg; sourceTree = "<group>"; };
+		30A80D2B1B01002F0052A45C /* mountain_negx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain_negx.jpg; sourceTree = "<group>"; };
+		30A80D2C1B01002F0052A45C /* mountain_negy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain_negy.jpg; sourceTree = "<group>"; };
+		30A80D2D1B01002F0052A45C /* mountain_negz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain_negz.jpg; sourceTree = "<group>"; };
+		30A80D2E1B01002F0052A45C /* mountain_posx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain_posx.jpg; sourceTree = "<group>"; };
+		30A80D2F1B01002F0052A45C /* mountain_posy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain_posy.jpg; sourceTree = "<group>"; };
+		30A80D301B01002F0052A45C /* mountain_posz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain_posz.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		309CA26D1A90C5DA0004B9DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301F9AA51A90CBB900880CD5 /* libNyx.a in Frameworks */,
+				307B00A81B651F9500BFAF42 /* IOKit.framework in Frameworks */,
+				307B00A61B651F6000BFAF42 /* Cocoa.framework in Frameworks */,
+				307B00A21B651EF400BFAF42 /* CoreFoundation.framework in Frameworks */,
+				309CA3A41A90C89A0004B9DE /* OpenCL.framework in Frameworks */,
+				309CA3A21A90C88E0004B9DE /* OpenGL.framework in Frameworks */,
+				307B008F1B64F53A00BFAF42 /* SDL2.framework in Frameworks */,
+				307FEAD31B75211200A96DB8 /* SDL2_ttf.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		300FD4A51DD1F0480064B4C2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3070FE531DEF446100789E7C /* config.json */,
+				3070FE541DEF446100789E7C /* particle test.json */,
+				3070FE551DEF446100789E7C /* physics test.json */,
+				3070FE561DEF446100789E7C /* space scene.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		301F9A9C1A90C9FC00880CD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				301F9AA01A90C9FC00880CD5 /* libNyx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3070FE091DD75DB200789E7C /* old */ = {
+			isa = PBXGroup;
+			children = (
+				3070FE0A1DD75DB200789E7C /* BasicParticleShader.xml */,
+				3070FE0B1DD75DB200789E7C /* BasicShader.xml */,
+				3070FE0C1DD75DB200789E7C /* FlatShader.xml */,
+				3070FE0D1DD75DB200789E7C /* glsl */,
+				3070FE191DD75DB200789E7C /* hlsl11 */,
+				3070FE1E1DD75DB200789E7C /* hlsl9 */,
+				3070FE241DD75DB200789E7C /* ReflectionShader.xml */,
+				3070FE251DD75DB200789E7C /* SkyBoxShader.xml */,
+			);
+			path = old;
+			sourceTree = "<group>";
+		};
+		3070FE0D1DD75DB200789E7C /* glsl */ = {
+			isa = PBXGroup;
+			children = (
+				3070FE0E1DD75DB200789E7C /* BasicParticle.fs */,
+				3070FE0F1DD75DB200789E7C /* BasicParticle.gs */,
+				3070FE101DD75DB200789E7C /* BasicParticle.vs */,
+				3070FE111DD75DB200789E7C /* BasicShader.fs */,
+				3070FE121DD75DB200789E7C /* BasicShader.vs */,
+				3070FE131DD75DB200789E7C /* CubeMapReflection.fs */,
+				3070FE141DD75DB200789E7C /* CubeMapReflection.vs */,
+				3070FE151DD75DB200789E7C /* FlatShader.fs */,
+				3070FE161DD75DB200789E7C /* FlatShader.vs */,
+				3070FE171DD75DB200789E7C /* SkyBox.fs */,
+				3070FE181DD75DB200789E7C /* SkyBox.vs */,
+			);
+			path = glsl;
+			sourceTree = "<group>";
+		};
+		3070FE191DD75DB200789E7C /* hlsl11 */ = {
+			isa = PBXGroup;
+			children = (
+				3070FE1A1DD75DB200789E7C /* BasicShader.fx */,
+				3070FE1B1DD75DB200789E7C /* FlatPixelShader.hlsl */,
+				3070FE1C1DD75DB200789E7C /* FlatShader.fx */,
+				3070FE1D1DD75DB200789E7C /* FlatVertexShader.hlsl */,
+			);
+			path = hlsl11;
+			sourceTree = "<group>";
+		};
+		3070FE1E1DD75DB200789E7C /* hlsl9 */ = {
+			isa = PBXGroup;
+			children = (
+				3070FE1F1DD75DB200789E7C /* BasicShader.fx */,
+				3070FE201DD75DB200789E7C /* FlatShader - Copia.fx */,
+				3070FE211DD75DB200789E7C /* FlatShader.cod */,
+				3070FE221DD75DB200789E7C /* FlatShader.fx */,
+				3070FE231DD75DB200789E7C /* FlatShader.fxo */,
+			);
+			path = hlsl9;
+			sourceTree = "<group>";
+		};
+		309CA2671A90C5DA0004B9DE = {
+			isa = PBXGroup;
+			children = (
+				309CA3A51A90C89F0004B9DE /* Frameworks */,
+				301F9A9B1A90C9FC00880CD5 /* Nyx.xcodeproj */,
+				309CA2711A90C5DA0004B9DE /* Products */,
+				30A80CF81B00FFDA0052A45C /* Resources */,
+				309CA2961A90C6150004B9DE /* Source */,
+			);
+			sourceTree = "<group>";
+		};
+		309CA2711A90C5DA0004B9DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				309CA2701A90C5DA0004B9DE /* PhoenixDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		309CA2961A90C6150004B9DE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				309CA38E1A90C8370004B9DE /* Generic */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		309CA38E1A90C8370004B9DE /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				309CA3921A90C8540004B9DE /* config.h */,
+				309CA3931A90C8540004B9DE /* demo.cpp */,
+				309CA3941A90C8540004B9DE /* particle_test.cpp */,
+				309CA3951A90C8540004B9DE /* particle_test.h */,
+				309CA3961A90C8540004B9DE /* physics_test.cpp */,
+				309CA3971A90C8540004B9DE /* physics_test.h */,
+				309CA3981A90C8540004B9DE /* space_scene.cpp */,
+				309CA3991A90C8540004B9DE /* space_scene.h */,
+			);
+			name = Generic;
+			sourceTree = "<group>";
+		};
+		309CA3A51A90C89F0004B9DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				307FEAD21B75211100A96DB8 /* SDL2_ttf.framework */,
+				307B00A71B651F9500BFAF42 /* IOKit.framework */,
+				307B00A51B651F6000BFAF42 /* Cocoa.framework */,
+				307B00A31B651F1E00BFAF42 /* QuartzCore.framework */,
+				307B00A11B651EF400BFAF42 /* CoreFoundation.framework */,
+				307B008E1B64F53A00BFAF42 /* SDL2.framework */,
+				309CA3A31A90C89A0004B9DE /* OpenCL.framework */,
+				309CA3A11A90C88E0004B9DE /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30A80CF81B00FFDA0052A45C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				300FD4A51DD1F0480064B4C2 /* Data */,
+				307B009F1B651E2E00BFAF42 /* Info.plist */,
+				30A80D031B01002F0052A45C /* FXKernels */,
+				30A80D051B01002F0052A45C /* Models */,
+				30A80D0B1B01002F0052A45C /* Scripts */,
+				30A80D0E1B01002F0052A45C /* Shaders */,
+				30A80D281B01002F0052A45C /* Textures */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		30A80D031B01002F0052A45C /* FXKernels */ = {
+			isa = PBXGroup;
+			children = (
+				30A80D041B01002F0052A45C /* particle_fountain.cl */,
+			);
+			name = FXKernels;
+			path = ../../../../Resources/FXKernels;
+			sourceTree = "<group>";
+		};
+		30A80D051B01002F0052A45C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3070FE471DD75DBF00789E7C /* Marble.mtl */,
+				3070FE481DD75DBF00789E7C /* Marble.obj */,
+				30A80D061B01002F0052A45C /* Cube.mtl */,
+				30A80D071B01002F0052A45C /* Cube.obj */,
+				30A80D081B01002F0052A45C /* Mars.mtl */,
+				30A80D091B01002F0052A45C /* Mars.obj */,
+				30A80D0A1B01002F0052A45C /* Particle1.mtl */,
+			);
+			name = Models;
+			path = ../../../../Resources/Models;
+			sourceTree = "<group>";
+		};
+		30A80D0B1B01002F0052A45C /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				30A80D0C1B01002F0052A45C /* camera_anim.lua */,
+				30A80D0D1B01002F0052A45C /* particle_fountain.lua */,
+			);
+			name = Scripts;
+			path = ../../../../Resources/Scripts;
+			sourceTree = "<group>";
+		};
+		30A80D0E1B01002F0052A45C /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				3070FE051DD75DB200789E7C /* Basic.shader */,
+				3070FE061DD75DB200789E7C /* BasicParticle.shader */,
+				3070FE071DD75DB200789E7C /* CubeMapReflection.shader */,
+				3070FE081DD75DB200789E7C /* Flat.shader */,
+				3070FE091DD75DB200789E7C /* old */,
+				3070FE261DD75DB200789E7C /* SkyBox.shader */,
+				3070FE271DD75DB200789E7C /* UIShader.shader */,
+			);
+			name = Shaders;
+			path = ../../../../Resources/Shaders;
+			sourceTree = "<group>";
+		};
+		30A80D281B01002F0052A45C /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				3070FE031DD75D9E00789E7C /* marble_texture4662.jpg */,
+				30A80D291B01002F0052A45C /* MarsElevation_2500x1250.jpg */,
+				30A80D2A1B01002F0052A45C /* MarsMap_2500x1250.jpg */,
+				30A80D2B1B01002F0052A45C /* mountain_negx.jpg */,
+				30A80D2C1B01002F0052A45C /* mountain_negy.jpg */,
+				30A80D2D1B01002F0052A45C /* mountain_negz.jpg */,
+				30A80D2E1B01002F0052A45C /* mountain_posx.jpg */,
+				30A80D2F1B01002F0052A45C /* mountain_posy.jpg */,
+				30A80D301B01002F0052A45C /* mountain_posz.jpg */,
+			);
+			name = Textures;
+			path = ../../../../Resources/Textures;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		309CA26F1A90C5DA0004B9DE /* PhoenixDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 309CA2901A90C5DA0004B9DE /* Build configuration list for PBXNativeTarget "PhoenixDemo" */;
+			buildPhases = (
+				309CA26C1A90C5DA0004B9DE /* Sources */,
+				309CA26D1A90C5DA0004B9DE /* Frameworks */,
+				309CA26E1A90C5DA0004B9DE /* Resources */,
+				304C992B1B66959500F515E4 /* Copy SDL Framework */,
+				304C992E1B6698DE00F515E4 /* Copy Assets */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301F9AA41A90CBB400880CD5 /* PBXTargetDependency */,
+			);
+			name = PhoenixDemo;
+			productName = PhoenixDemo;
+			productReference = 309CA2701A90C5DA0004B9DE /* PhoenixDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		309CA2681A90C5DA0004B9DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Riccardo Marson";
+				TargetAttributes = {
+					309CA26F1A90C5DA0004B9DE = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 309CA26B1A90C5DA0004B9DE /* Build configuration list for PBXProject "PhoenixDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 309CA2671A90C5DA0004B9DE;
+			productRefGroup = 309CA2711A90C5DA0004B9DE /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 301F9A9C1A90C9FC00880CD5 /* Products */;
+					ProjectRef = 301F9A9B1A90C9FC00880CD5 /* Nyx.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				309CA26F1A90C5DA0004B9DE /* PhoenixDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		301F9AA01A90C9FC00880CD5 /* libNyx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNyx.a;
+			remoteRef = 301F9A9F1A90C9FC00880CD5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		309CA26E1A90C5DA0004B9DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3070FE3F1DD75DB200789E7C /* FlatShader - Copia.fx in Resources */,
+				3070FE041DD75D9E00789E7C /* marble_texture4662.jpg in Resources */,
+				3070FE451DD75DB200789E7C /* SkyBox.shader in Resources */,
+				3070FE381DD75DB200789E7C /* SkyBox.fs in Resources */,
+				307B00A01B651E2E00BFAF42 /* Info.plist in Resources */,
+				3070FE341DD75DB200789E7C /* CubeMapReflection.fs in Resources */,
+				3070FE3B1DD75DB200789E7C /* FlatPixelShader.hlsl in Resources */,
+				3070FE3D1DD75DB200789E7C /* FlatVertexShader.hlsl in Resources */,
+				3070FE301DD75DB200789E7C /* BasicParticle.gs in Resources */,
+				3070FE281DD75DB200789E7C /* Basic.shader in Resources */,
+				3070FE391DD75DB200789E7C /* SkyBox.vs in Resources */,
+				3070FE2C1DD75DB200789E7C /* BasicParticleShader.xml in Resources */,
+				3070FE3E1DD75DB200789E7C /* BasicShader.fx in Resources */,
+				3070FE2A1DD75DB200789E7C /* CubeMapReflection.shader in Resources */,
+				3070FE421DD75DB200789E7C /* FlatShader.fxo in Resources */,
+				3070FE571DEF446100789E7C /* config.json in Resources */,
+				3070FE461DD75DB200789E7C /* UIShader.shader in Resources */,
+				3070FE3C1DD75DB200789E7C /* FlatShader.fx in Resources */,
+				3070FE4A1DD75DBF00789E7C /* Marble.obj in Resources */,
+				3070FE2B1DD75DB200789E7C /* Flat.shader in Resources */,
+				3070FE5A1DEF446100789E7C /* space scene.json in Resources */,
+				3070FE371DD75DB200789E7C /* FlatShader.vs in Resources */,
+				3070FE431DD75DB200789E7C /* ReflectionShader.xml in Resources */,
+				3070FE581DEF446100789E7C /* particle test.json in Resources */,
+				3070FE2E1DD75DB200789E7C /* FlatShader.xml in Resources */,
+				3070FE591DEF446100789E7C /* physics test.json in Resources */,
+				3070FE331DD75DB200789E7C /* BasicShader.vs in Resources */,
+				3070FE441DD75DB200789E7C /* SkyBoxShader.xml in Resources */,
+				3070FE2F1DD75DB200789E7C /* BasicParticle.fs in Resources */,
+				3070FE491DD75DBF00789E7C /* Marble.mtl in Resources */,
+				3070FE411DD75DB200789E7C /* FlatShader.fx in Resources */,
+				3070FE351DD75DB200789E7C /* CubeMapReflection.vs in Resources */,
+				3070FE361DD75DB200789E7C /* FlatShader.fs in Resources */,
+				3070FE311DD75DB200789E7C /* BasicParticle.vs in Resources */,
+				3070FE3A1DD75DB200789E7C /* BasicShader.fx in Resources */,
+				3070FE401DD75DB200789E7C /* FlatShader.cod in Resources */,
+				3070FE291DD75DB200789E7C /* BasicParticle.shader in Resources */,
+				3070FE2D1DD75DB200789E7C /* BasicShader.xml in Resources */,
+				3070FE321DD75DB200789E7C /* BasicShader.fs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		304C992E1B6698DE00F515E4 /* Copy Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Assets";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -avzu --exclude '.DS_Store' --exclude 'create_dest_tree.bat' --delete \"../../../../Resources/\" \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app/Contents/Resources/\"\nrsync -avzu --exclude '.DS_Store' \"../../Data/\" \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app/Contents/Resources/Data/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		309CA26C1A90C5DA0004B9DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309CA39A1A90C8540004B9DE /* demo.cpp in Sources */,
+				309CA39B1A90C8540004B9DE /* particle_test.cpp in Sources */,
+				30A80D311B01002F0052A45C /* particle_fountain.cl in Sources */,
+				309CA39D1A90C8540004B9DE /* space_scene.cpp in Sources */,
+				309CA39C1A90C8540004B9DE /* physics_test.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		301F9AA41A90CBB400880CD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Nyx;
+			targetProxy = 301F9AA31A90CBB400880CD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		309CA28E1A90C5DA0004B9DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		309CA28F1A90C5DA0004B9DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		309CA2911A90C5DA0004B9DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/../../../../build/Debug";
+				CONFIGURATION_TEMP_DIR = "${PROJECT_DIR}/../../../../build/objects/Debug";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../thirdparty/OSX,
+					/Users/riccardomarson/Software/phoenix/thirdparty/OSX,
+				);
+				GCC_PREFIX_HEADER = ../../../../Nyx/config.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					__DEBUG__,
+					__STATIC_BUILD__,
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../thirdparty/OSX,
+				);
+				OBJROOT = "${PROJECT_DIR}/../../../../build/objects/";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "${PROJECT_DIR}/../../../../../build";
+				USER_HEADER_SEARCH_PATHS = "../../../../Nyx ../../../../Nyx/Physics ../../../../Nyx/Renderer ../../../../Nyx/Scene ../../../../Nyx/Scripts ../../../../Nyx/Utils ../../../../Nyx/Math ../../../../Nyx/Events ../../../../Nyx/Cache ../../../../Game ../../../../thirdparty ../../../../thirdparty/Bullet";
+				VALID_ARCHS = i386;
+			};
+			name = Debug;
+		};
+		309CA2921A90C5DA0004B9DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/../../../../build/Release";
+				CONFIGURATION_TEMP_DIR = "${PROJECT_DIR}/../../../../build/objects/Release";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../thirdparty/OSX,
+					/Users/riccardomarson/Software/phoenix/thirdparty/OSX,
+				);
+				GCC_PREFIX_HEADER = ../../../../Nyx/config.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					__DEBUG__,
+					__STATIC_BUILD__,
+				);
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../thirdparty/OSX,
+				);
+				OBJROOT = "${PROJECT_DIR}/../../../../build/objects/";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "${PROJECT_DIR}/../../../../../build";
+				USER_HEADER_SEARCH_PATHS = "../../../../Nyx ../../../../Nyx/Physics ../../../../Nyx/Renderer ../../../../Nyx/Scene ../../../../Nyx/Scripts ../../../../Nyx/Utils ../../../../Nyx/Math ../../../../Nyx/Events ../../../../Nyx/Cache ../../../../Game ../../../../thirdparty ../../../../thirdparty/Bullet";
+				VALID_ARCHS = i386;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		309CA26B1A90C5DA0004B9DE /* Build configuration list for PBXProject "PhoenixDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				309CA28E1A90C5DA0004B9DE /* Debug */,
+				309CA28F1A90C5DA0004B9DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		309CA2901A90C5DA0004B9DE /* Build configuration list for PBXNativeTarget "PhoenixDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				309CA2911A90C5DA0004B9DE /* Debug */,
+				309CA2921A90C5DA0004B9DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 309CA2681A90C5DA0004B9DE /* Project object */;
+}

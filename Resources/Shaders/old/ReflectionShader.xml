@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShaderPackage name="ReflectionShader">
+	<profile target="glsl" version="4"> 
+		<uniform>mMV</uniform>
+		<uniform>mProj</uniform>
+		<uniform>mView</uniform>
+		<uniform>skyMap</uniform>
+		<program name="ReflectionShaderProg">
+			<vs>CubeMapReflection.vs</vs>
+			<fs>CubeMapReflection.fs</fs>
+		</program>
+		<technique name="ReflectionShader">
+			<pass number="0">ReflectionShaderProg</pass>
+		</technique>
+	</profile>
+	<profile target="d3d9" version="2">
+		<uniform>mMV</uniform>
+		<uniform>mProj</uniform>
+		<uniform>mView</uniform>
+		<uniform>skyMap</uniform>
+		<fx binary="true">ReflectionShader.fxo</fx>
+	</profile>
+	<profile target="d3d11" version="5">
+		<uniform>mMV</uniform>
+		<uniform>mProj</uniform>
+		<uniform>mView</uniform>
+		<uniform>skyMap</uniform>
+		<program name="ReflectionShaderProg">
+			<vs>CubeMapReflection.cso</vs>
+			<fs>CubeMapReflection.cso</fs>
+		</program>
+		<technique name="ReflectionShader">
+			<pass number="0">ReflectionShaderProg</pass>
+		</technique>
+	</profile>
+</ShaderPackage>

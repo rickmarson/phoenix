@@ -1,0 +1,65 @@
+{
+	"title":"Physics Test",
+	"show title":true,
+	"load":true,
+	"show first":false,
+
+	"physics":{
+		"gravity":[0.0, -1.0, 0.0]
+	},
+
+	"camera":{
+		"name":"cam1",
+		"type":"first person",
+		"active":true,
+		"position":[0.0, 0.0, -20.0],
+		"up":[0.0, 1.0, 0.0],
+		"look":[0.0, 0.0, 0.0],
+		"attitude":[0.0, 0.0, 0.0],
+		"perspective":{
+			"clip near":0.01,
+			"clip far":100,
+			"fov":60
+		}
+	},
+
+	"light":{
+		"name":"light1",
+		"active":true,
+		"directional":false,
+		"position":[0.0, 2.0, -8.0],
+		"attitude":[0.0, 0.0, 0.0],
+		"diffuse":[1.0, 1.0, 1.0, 0.0],
+		"ambient":[1.0, 1.0, 1.0, 0.0],
+		"specular":[1.0, 1.0, 1.0, 0.0]
+	},
+
+	"object":{
+		"name":"Marble",
+		"position":[0.0, 1.0, 0.0],
+		"attitude":[0.0, 0.0, 0.0],
+		"model":"Marble",
+		"rigid body":{
+			"shape":{
+				"name":"sphere",
+				"radius":1.0
+			},
+			"mass":1.0,
+			"inertia":[0.0, 0.0, 0.0],
+			"initial velocity":[0.4, 3.2, 0.0]
+		}
+	},
+
+	"rigid body":{
+		"name":"ground",
+		"shape":{
+			"name":"box",
+			"dimensions":[15.0, 15.0, 15.0]
+		},
+		"position":[-7.5, -22.0, -7.5],
+		"attitude":[0.0, 0.0, 0.0],
+		"mass":0.0,
+		"inertia":[0.0, 0.0, 0.0],
+		"friction":0.0
+	}
+}

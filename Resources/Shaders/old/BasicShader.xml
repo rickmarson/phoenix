@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShaderPackage name="BasicShader">
+	<profile target="glsl" version="4"> 
+		<uniform>mMV</uniform>
+		<uniform>mProj</uniform>
+		<uniform>vDiffuseColor</uniform>
+		<uniform>vAmbientColor</uniform>
+		<uniform>vSpecularColor</uniform>
+		<uniform>sShininess</uniform>
+		<uniform>vLightPos</uniform>
+		<uniform>vLightDiffuse</uniform>
+		<uniform>vLightAmbient</uniform>
+		<uniform>vLightSpecular</uniform>
+		<uniform>vEye</uniform>
+		<uniform>diffuseTexture0</uniform>
+		<program name="BasicShaderProg">
+			<vs>BasicShader.vs</vs>
+			<fs>BasicShader.fs</fs>
+		</program>
+		<technique name="BasicShader">
+			<pass number="0">BasicShaderProg</pass>
+		</technique>
+	</profile>
+	<profile target="d3d9" version="2">
+		<uniform>mMV</uniform>
+		<uniform>mProj</uniform>
+		<uniform>vDiffuseColor</uniform>
+		<uniform>vAmbientColor</uniform>
+		<uniform>vSpecularColor</uniform>
+		<uniform>sShininess</uniform>
+		<uniform>vLightPos</uniform>
+		<uniform>vLightDiffuse</uniform>
+		<uniform>vLightAmbient</uniform>
+		<uniform>vLightSpecular</uniform>
+		<uniform>vEye</uniform>
+		<uniform>diffuseTexture0</uniform>
+		<fx binary="true">BasicShader.fxo</fx>
+	</profile>
+	<profile target="d3d11" version="5">
+		<uniform>mMV</uniform>
+		<uniform>mProj</uniform>
+		<uniform>vDiffuseColor</uniform>
+		<uniform>vAmbientColor</uniform>
+		<uniform>vSpecularColor</uniform>
+		<uniform>sShininess</uniform>
+		<uniform>vLightPos</uniform>
+		<uniform>vLightDiffuse</uniform>
+		<uniform>vLightAmbient</uniform>
+		<uniform>vLightSpecular</uniform>
+		<uniform>vEye</uniform>
+		<uniform>diffuseTexture0</uniform>
+		<program name="BasicShaderProg">
+			<vs>BasicShader.cso</vs>
+			<fs>BasicShader.cso</fs>
+		</program>
+		<technique name="BasicShader">
+			<pass number="0">BasicShaderProg</pass>
+		</technique>
+	</profile>
+</ShaderPackage>

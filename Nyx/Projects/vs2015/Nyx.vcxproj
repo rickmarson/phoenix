@@ -1,0 +1,725 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6140A3B0-BC5C-4999-AF3D-06E058AD0053}</ProjectGuid>
+    <RootNamespace>Nyx</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>Phoenix</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.lib</TargetExt>
+    <OutDir>$(SolutionDir)..\..\lib\</OutDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+    <IntDir>$(SolutionDir)\..\..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <CustomBuildBeforeTargets>PreBuildEvent</CustomBuildBeforeTargets>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\..\lib\</OutDir>
+    <TargetExt>.lib</TargetExt>
+    <IntDir>$(SolutionDir)\..\..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\;..\..\Cache;..\..\Events;..\..\Math;..\..\Utils;..\..\Scripts;..\..\Scene;..\..\Renderer;..\..\Physics;..\..\UI;..\..\..\thirdparty;..\..\..\thirdparty\SDL;..\..\..\thirdparty\SDL\SDL_ttf;..\..\..\thirdparty\Bullet;..\..\..\thirdparty\LuaPlus\src</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4305;4244;4251;4316;</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;__STATIC_BUILD__;DEBUG;__USE_D3D11__</PreprocessorDefinitions>
+      <ForcedIncludeFiles>config.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>$(SolutionDir)\..\..\Resources\create_dest_tree.bat $(SolutionDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\;..\..\Cache;..\..\Events;..\..\Math;..\..\Utils;..\..\Scripts;..\..\Scene;..\..\Renderer;..\..\Physics;..\..\UI;..\..\..\thirdparty;..\..\..\thirdparty\SDL;..\..\..\thirdparty\SDL\SDL_ttf;..\..\..\thirdparty\Bullet;..\..\..\thirdparty\LuaPlus\src</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4305;4244;4251;4316;</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;__STATIC_BUILD__;__USE_D3D11__</PreprocessorDefinitions>
+      <ForcedIncludeFiles>config.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>$(SolutionDir)\..\..\Resources\create_dest_tree.bat $(SolutionDir</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\LuaPlus.cpp" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\LuaPlusAddons.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\LuaState_DumpObject.cpp" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lapi.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lauxlib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lbaselib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lbitlib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lcode.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lcorolib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lctype.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldblib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldebug.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldo.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldump.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lfunc.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lgc.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\linit.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\liolib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\llex.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lmathlib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lmem.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\loadlib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lobject.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lopcodes.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\loslib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lparser.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lstate.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lstring.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lstrlib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ltable.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ltablib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ltm.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lua.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\luac.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lundump.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lutf8lib.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lvm.c" />
+    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lzio.c" />
+    <ClCompile Include="..\..\..\thirdparty\stb\stb_image.c" />
+    <ClCompile Include="..\..\..\thirdparty\stb\stb_vorbis.c" />
+    <ClCompile Include="..\..\application.cpp" />
+    <ClCompile Include="..\..\Cache\resource.cpp" />
+    <ClCompile Include="..\..\Cache\resource_cache.cpp" />
+    <ClCompile Include="..\..\Events\events.cpp" />
+    <ClCompile Include="..\..\Events\event_manager.cpp" />
+    <ClCompile Include="..\..\material.cpp" />
+    <ClCompile Include="..\..\Math\matrix3x3.cpp" />
+    <ClCompile Include="..\..\Math\matrix4x4.cpp" />
+    <ClCompile Include="..\..\Math\quaternion.cpp" />
+    <ClCompile Include="..\..\Math\vector2.cpp" />
+    <ClCompile Include="..\..\Math\vector3.cpp" />
+    <ClCompile Include="..\..\Math\vector4.cpp" />
+    <ClCompile Include="..\..\mesh.cpp" />
+    <ClCompile Include="..\..\model.cpp" />
+    <ClCompile Include="..\..\particlefx.cpp" />
+    <ClCompile Include="..\..\Physics\body.cpp" />
+    <ClCompile Include="..\..\Physics\physics_engine.cpp" />
+    <ClCompile Include="..\..\Physics\rigid_body.cpp" />
+    <ClCompile Include="..\..\Physics\soft_body.cpp" />
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_effect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_index_buffer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_renderer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_render_buffer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_shader_utils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_texture.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_vertex_array_object.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_vertex_buffer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\effect.cpp" />
+    <ClCompile Include="..\..\Renderer\fx_manager.cpp" />
+    <ClCompile Include="..\..\Renderer\ogl\glsl_effect.cpp" />
+    <ClCompile Include="..\..\Renderer\ogl\glsl_shader_utils.cpp" />
+    <ClCompile Include="..\..\Renderer\ogl\gl_index_buffer.cpp" />
+    <ClCompile Include="..\..\Renderer\ogl\gl_renderer.cpp" />
+    <ClCompile Include="..\..\Renderer\ogl\gl_render_buffer.cpp" />
+    <ClCompile Include="..\..\Renderer\ogl\gl_texture.cpp" />
+    <ClCompile Include="..\..\Renderer\ogl\gl_utils.cpp" />
+    <ClCompile Include="..\..\Renderer\ogl\gl_vertex_array_object.cpp" />
+    <ClCompile Include="..\..\Renderer\ogl\gl_vertex_buffer.cpp" />
+    <ClCompile Include="..\..\Renderer\shader_uniform.cpp" />
+    <ClCompile Include="..\..\Renderer\shader_utils.cpp" />
+    <ClCompile Include="..\..\scene.cpp" />
+    <ClCompile Include="..\..\Scene\camera_fp.cpp" />
+    <ClCompile Include="..\..\Scene\camera_node.cpp" />
+    <ClCompile Include="..\..\Scene\camera_tp.cpp" />
+    <ClCompile Include="..\..\Scene\frustum.cpp" />
+    <ClCompile Include="..\..\Scene\light_node.cpp" />
+    <ClCompile Include="..\..\Scene\mesh_node.cpp" />
+    <ClCompile Include="..\..\Scene\model_node.cpp" />
+    <ClCompile Include="..\..\Scene\particle_node.cpp" />
+    <ClCompile Include="..\..\Scene\root_node.cpp" />
+    <ClCompile Include="..\..\Scene\scene_node.cpp" />
+    <ClCompile Include="..\..\Scene\skybox.cpp" />
+    <ClCompile Include="..\..\Script\script_manager.cpp" />
+    <ClCompile Include="..\..\UI\label.cpp" />
+    <ClCompile Include="..\..\UI\ui_manager.cpp" />
+    <ClCompile Include="..\..\UI\widget.cpp" />
+    <ClCompile Include="..\..\Utils\file_manager.cpp" />
+    <ClCompile Include="..\..\Utils\hash.cpp" />
+    <ClCompile Include="..\..\Utils\log_manager.cpp" />
+    <ClCompile Include="..\..\window.cpp" />
+    <ClCompile Include="..\..\window_state.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\thirdparty\Json\json.h" />
+    <ClInclude Include="..\..\..\thirdparty\Json\json.hpp" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaAutoBlock.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaCall.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaFunction.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaHelper.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaHelper_Object.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaHelper_StackObject.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaObject.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlus.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlusCD.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlusConfig.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlusInternal.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStackObject.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaState.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStateCD.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStateOutFile.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStateOutString.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaTableIterator.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lapi.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lauxlib.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lcode.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lctype.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ldebug.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ldo.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lfunc.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lgc.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\llex.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\llimits.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lmem.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lobject.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lopcodes.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lparser.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lprefix.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lstate.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lstring.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ltable.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ltm.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lua.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lua.hpp" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\luaconf.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lualib.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lundump.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lvm.h" />
+    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lzio.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_c_lexer.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_divide.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_dxt.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_easy_font.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_herringbone_wang_tile.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_image.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_image_resize.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_image_write.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_leakcheck.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_perlin.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_rect_pack.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_textedit.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_tilemap_editor.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stb_truetype.h" />
+    <ClInclude Include="..\..\..\thirdparty\stb\stretchy_buffer.h" />
+    <ClInclude Include="..\..\application.h" />
+    <ClInclude Include="..\..\Cache\iresources.h" />
+    <ClInclude Include="..\..\Cache\resource.h" />
+    <ClInclude Include="..\..\Cache\resource_cache.h" />
+    <ClInclude Include="..\..\config.h" />
+    <ClInclude Include="..\..\Events\events.h" />
+    <ClInclude Include="..\..\Events\event_manager.h" />
+    <ClInclude Include="..\..\Events\ievent.h" />
+    <ClInclude Include="..\..\material.h" />
+    <ClInclude Include="..\..\Math\constants.h" />
+    <ClInclude Include="..\..\Math\matrix3x3.h" />
+    <ClInclude Include="..\..\Math\matrix4x4.h" />
+    <ClInclude Include="..\..\Math\quaternion.h" />
+    <ClInclude Include="..\..\Math\vector2.h" />
+    <ClInclude Include="..\..\Math\vector3.h" />
+    <ClInclude Include="..\..\Math\vector4.h" />
+    <ClInclude Include="..\..\mesh.h" />
+    <ClInclude Include="..\..\model.h" />
+    <ClInclude Include="..\..\particlefx.h" />
+    <ClInclude Include="..\..\Physics\body.h" />
+    <ClInclude Include="..\..\Physics\iphysics_engine.h" />
+    <ClInclude Include="..\..\Physics\physics_engine.h" />
+    <ClInclude Include="..\..\Physics\rigid_body.h" />
+    <ClInclude Include="..\..\Physics\soft_body.h" />
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_effect.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_index_buffer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_renderer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_render_buffer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_shader_utils.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_texture.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_vertex_array_object.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_vertex_buffer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d_renderer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\effect.h" />
+    <ClInclude Include="..\..\Renderer\fx_manager.h" />
+    <ClInclude Include="..\..\Renderer\index_buffer.h" />
+    <ClInclude Include="..\..\Renderer\irenderer.h" />
+    <ClInclude Include="..\..\Renderer\ogl\glsl_effect.h" />
+    <ClInclude Include="..\..\Renderer\ogl\glsl_shader_utils.h" />
+    <ClInclude Include="..\..\Renderer\ogl\gl_index_buffer.h" />
+    <ClInclude Include="..\..\Renderer\ogl\gl_renderer.h" />
+    <ClInclude Include="..\..\Renderer\ogl\gl_render_buffer.h" />
+    <ClInclude Include="..\..\Renderer\ogl\gl_texture.h" />
+    <ClInclude Include="..\..\Renderer\ogl\gl_utils.h" />
+    <ClInclude Include="..\..\Renderer\ogl\gl_vertex_array_object.h" />
+    <ClInclude Include="..\..\Renderer\ogl\gl_vertex_buffer.h" />
+    <ClInclude Include="..\..\Renderer\render_buffer.h" />
+    <ClInclude Include="..\..\Renderer\render_factory.h" />
+    <ClInclude Include="..\..\Renderer\shader_uniform.h" />
+    <ClInclude Include="..\..\Renderer\shader_utils.h" />
+    <ClInclude Include="..\..\Renderer\texture.h" />
+    <ClInclude Include="..\..\Renderer\vertex_array_object.h" />
+    <ClInclude Include="..\..\Renderer\vertex_buffer.h" />
+    <ClInclude Include="..\..\scene.h" />
+    <ClInclude Include="..\..\Scene\camera_fp.h" />
+    <ClInclude Include="..\..\Scene\camera_node.h" />
+    <ClInclude Include="..\..\Scene\camera_tp.h" />
+    <ClInclude Include="..\..\Scene\frustum.h" />
+    <ClInclude Include="..\..\Scene\light_node.h" />
+    <ClInclude Include="..\..\Scene\mesh_node.h" />
+    <ClInclude Include="..\..\Scene\model_node.h" />
+    <ClInclude Include="..\..\Scene\particle_node.h" />
+    <ClInclude Include="..\..\Scene\root_node.h" />
+    <ClInclude Include="..\..\Scene\scene_node.h" />
+    <ClInclude Include="..\..\Scene\skybox.h" />
+    <ClInclude Include="..\..\Script\script_manager.h" />
+    <ClInclude Include="..\..\UI\label.h" />
+    <ClInclude Include="..\..\UI\ui_events.h" />
+    <ClInclude Include="..\..\UI\ui_manager.h" />
+    <ClInclude Include="..\..\UI\widget.h" />
+    <ClInclude Include="..\..\Utils\file_manager.h" />
+    <ClInclude Include="..\..\Utils\hash.h" />
+    <ClInclude Include="..\..\Utils\log_manager.h" />
+    <ClInclude Include="..\..\Utils\singleton.h" />
+    <ClInclude Include="..\..\window.h" />
+    <ClInclude Include="..\..\window_state.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\Resources\FXKernels\particle_fountain.cl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\FXKernels"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\FXKernels"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Kernels</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\FXKernels\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Kernels</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\FXKernels\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Cube.mtl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Mars.mtl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Particle1.mtl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Scripts\camera_anim.lua">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Scripts"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Scripts"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Scripts</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Scripts\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Scripts</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Scripts\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Scripts\particle_fountain.lua">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Scripts"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Scripts"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Scripts</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Scripts\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Scripts</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Scripts\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\Resources\Textures\MarsElevation_2500x1250.jpg">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\MarsMap_2500x1250.jpg">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_negx.jpg">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_negy.jpg">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_negz.jpg">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_posx.jpg">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_posy.jpg">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_posz.jpg">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\Resources\Models\Cube.obj">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Mars.obj">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Resources\create_dest_tree.bat">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Creates Resources directory tree in output dir, if necessary</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"%(FullPath)" "$(SolutionDir)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"%(FullPath)" "$(SolutionDir)"</Command>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Creates Resources directory tree in output dir, if necessary</Message>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </None>
+    <CustomBuild Include="..\..\..\Resources\Shaders\Basic.shader">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Shaders</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\BasicParticle.shader">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Shaders</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\CubeMapReflection.shader">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Shaders</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\Flat.shader">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Shaders</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\SkyBox.shader">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Shaders</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\UIShader.shader">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Shaders"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Shaders</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Shaders</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Shaders\%(Filename)%(Extension);%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Marble.mtl">
+      <FileType>Document</FileType>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Models</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="..\..\..\thirdparty\LuaPlus\LuaCall.inl" />
+    <None Include="..\..\..\thirdparty\LuaPlus\LuaObject.inl" />
+    <None Include="..\..\..\thirdparty\LuaPlus\LuaStackObject.inl" />
+    <None Include="..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.inl" />
+    <None Include="..\..\..\thirdparty\LuaPlus\LuaState.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\Resources\Fonts\Capture_it.ttf">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Fonts"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Fonts</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Fonts"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Fonts</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Fonts\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Fonts\%(Filename)%(Extension);%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Fonts\OpenSans-Regular.ttf">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Fonts"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Fonts</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Fonts"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Fonts</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Fonts\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Fonts\%(Filename)%(Extension);%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\Resources\Fonts\Apache License.txt" />
+    <Text Include="..\..\..\Resources\Fonts\Cpr.Sparhelt font License.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Fonts"</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Fonts"</ExcludedFromBuild>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\Resources\Models\Marble.obj">
+      <FileType>Document</FileType>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Models"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Models</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Models</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\Resources\Textures\marble_texture4662.jpg">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Textures"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying Textures</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying Textures</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Textures\%(Filename)%(Extension);%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

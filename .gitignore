@@ -1,0 +1,10 @@
+build/
+bin/
+lib/
+thirdparty/Win
+thirdparty/OSX
+Projects/vs2015/.vs/Phoenix/v14/.suo
+Projects/vs2015/log.txt
+Projects/vs2015/Phoenix.sdf
+Projects/vs2015/Phoenix.VC.opendb
+log.txt

@@ -1,0 +1,9 @@
+{
+	"window":{
+		"title":"Phoenix Demo",
+		"width":1024,
+		"height":768,
+		"depth":24,
+		"backend":"OpenGL"
+	}
+}	

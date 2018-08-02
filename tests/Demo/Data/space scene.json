@@ -1,0 +1,50 @@
+{
+	"title":"Space Scene",
+	"show title":true,
+	"load":true,
+	"show first":false,
+
+	"camera":{
+		"name":"cam1",
+		"type":"third person",
+		"active":true,
+		"position":[0.0, 0.0, 8.0],
+		"target":"Mars",
+		"up":[0.0, 1.0, 0.0],
+		"attitude":[0.0, 0.0, 0.0],
+		"perspective":{
+			"clip near":0.01,
+			"clip far":200,
+			"fov":45
+		},
+		"script":{
+			"file name":"camera_anim",
+			"function name":"MoveCamera"
+		}
+	},
+
+	"light":{
+		"name":"light1",
+		"active":true,
+		"directional":false,
+		"position":[0.0, 2.0, -8.0],
+		"attitude":[0.0, 0.0, 0.0],
+		"diffuse":[1.0, 1.0, 1.0, 0.0],
+		"ambient":[1.0, 1.0, 1.0, 0.0],
+		"specular":[1.0, 1.0, 1.0, 0.0]
+	},
+
+	"skybox":{
+		"cube texture":"mountain.jpg",
+		"shader name":"SkyBox",
+		"scale":100
+	},
+
+	"object":{
+		"name":"Mars",
+		"position":[0.0, 0.0, 0.0],
+		"attitude":[0.0, 0.0, 0.0],
+		"scale":3.0,
+		"model":"Mars"
+	}
+}

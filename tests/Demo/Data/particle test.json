@@ -1,0 +1,50 @@
+{
+	"title":"Particle Test",
+	"show title":true,
+	"load":true,
+	"show first":true,
+
+	"camera":{
+		"name":"cam1",
+		"type":"third person",
+		"active":true,
+		"position":[0.0, 0.0, 12.0],
+		"target":"FX node",
+		"up":[0.0, 1.0, 0.0],
+		"attitude":[0.0, 0.0, 0.0],
+		"perspective":{
+			"clip near":0.01,
+			"clip far":100,
+			"fov":45
+		}
+	},
+
+	"light":{
+		"name":"light1",
+		"active":true,
+		"directional":false,
+		"position":[0.0, 2.0, -8.0],
+		"attitude":[0.0, 0.0, 0.0],
+		"diffuse":[1.0, 1.0, 1.0, 0.0],
+		"ambient":[1.0, 1.0, 1.0, 0.0],
+		"specular":[1.0, 1.0, 1.0, 0.0]
+	},
+
+	"particle emitter":{
+		"name":"FX node",
+		"position":[0.0, 0.0, 0.0],
+		"attitude":[0.0, 0.0, 0.0],
+		"particle count":10000,
+		"script":{
+			"file name":"particle_fountain",
+			"function name":"GenerateParticleCloud"
+		},
+
+		"kernel":{
+			"file name":"particle_fountain",
+			"kernel name":"gl_particle_rain"
+		},
+
+		"material":"Particle1"
+	}
+}

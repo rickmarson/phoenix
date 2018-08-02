@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShaderPackage name="FlatShader">
+	<profile target="glsl" version="4"> 
+		<uniform>mMVP</uniform>
+		<uniform>vDiffuseColor</uniform>
+		<program name="FlatShaderProg">
+			<vs>FlatShader.vs</vs>
+			<fs>FlatShader.fs</fs>
+		</program>
+		<technique name="FlatShader">
+			<pass number="0">FlatShaderProg</pass>
+		</technique>
+	</profile>
+	<profile target="d3d9" version="2">
+		<uniform>mMVP</uniform>
+		<uniform>vDiffuseColor</uniform>
+		<fx binary="true">FlatShader.fxo</fx>
+	</profile>
+	<profile target="d3d11" version="5">
+		<uniform>mMVP</uniform>
+		<uniform>vDiffuseColor</uniform>
+		<program name="FlatShaderProg">
+			<vs>FlatVertexShader.cso</vs>
+			<fs>FlatPixelShader.cso</fs>
+		</program>
+		<technique name="FlatShader">
+			<pass number="0">FlatShaderProg</pass>
+		</technique>
+	</profile>
+</ShaderPackage>

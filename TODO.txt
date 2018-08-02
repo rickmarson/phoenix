@@ -1,0 +1,23 @@
+List of TODO items 
+- Switch to JSON
+- Implement a button and event handling.  
+- Add support for Tessellation
+- Fix up D3D
+- Debug rotations
+
+Space Scene
+- Tesselate planet
+- Change script to make an orbit
+- Draw orbit line
+- Add button to fire engine (fixed Delta-V) and change orbit
+
+Physics Test
+- Add small brick wall and make the marble smash it
+- Add floor model
+- Add a soft body (e.g. waving flag)
+
+LOW PRIORITY
+
+- Pool allocate uniforms.
+- Shouldn’t vertex array objects be set per program instead of per mesh?
+- unify window state and scene (they are basically the same thing).

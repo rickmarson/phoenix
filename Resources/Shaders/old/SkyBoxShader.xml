@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShaderPackage name="SkyBoxShader">
+	<profile target="glsl" version="4"> 
+		<uniform>mMVP</uniform>
+		<uniform>skyMap</uniform>
+		<program name="SkyBoxShaderProg">
+			<vs>SkyBox.vs</vs>
+			<fs>SkyBox.fs</fs>
+		</program>
+		<technique name="SkyBox">
+			<pass number="0">SkyBoxShaderProg</pass>
+		</technique>
+	</profile>
+	<profile target="d3d9" version="2">
+		<uniform>mMVP</uniform>
+		<uniform>skyMap</uniform>
+		<fx binary="true">SkyBoxShader.fxo</fx>
+	</profile>
+	<profile target="d3d11" version="5">
+		<uniform>mMVP</uniform>
+		<uniform>skyMap</uniform>
+		<program name="SkyBoxShaderProg">
+			<vs>SkyBox.cso</vs>
+			<fs>SkyBox.cso</fs>
+		</program>
+		<technique name="SkyBox">
+			<pass number="0">SkyBoxShaderProg</pass>
+		</technique>
+	</profile>
+</ShaderPackage>

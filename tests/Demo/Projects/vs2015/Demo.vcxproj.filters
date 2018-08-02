@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generic">
+      <UniqueIdentifier>{aaaff44b-fc27-4b1d-912a-b057e3e309e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dlls">
+      <UniqueIdentifier>{98f6672f-3e0d-4d31-a7a0-7c37931dadc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{1bed0f8a-93ba-4bdf-b2e8-66d8f2e4821b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\demo.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\particle_test.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\physics_test.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\space_scene.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\config.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\particle_test.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physics_test.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\space_scene.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\thirdparty\Win\FreeImage.dll">
+      <Filter>dlls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\..\thirdparty\Win\glew32.dll">
+      <Filter>dlls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\..\thirdparty\Win\physfs.dll">
+      <Filter>dlls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\..\thirdparty\Win\SDL2.dll">
+      <Filter>dlls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\..\thirdparty\Win\SDL2_ttf.dll">
+      <Filter>dlls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\..\thirdparty\Win\zlib1.dll">
+      <Filter>dlls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\..\thirdparty\Win\libfreetype-6.dll">
+      <Filter>dlls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Data\config.xml" />
+    <CustomBuild Include="..\..\Data\particle test.xml" />
+    <CustomBuild Include="..\..\Data\physics test.xml" />
+    <CustomBuild Include="..\..\Data\space scene.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Data\particle test.json">
+      <Filter>Data</Filter>
+    </None>
+    <None Include="..\..\Data\physics test.json">
+      <Filter>Data</Filter>
+    </None>
+    <None Include="..\..\Data\space scene.json">
+      <Filter>Data</Filter>
+    </None>
+    <None Include="..\..\Data\config.json">
+      <Filter>Data</Filter>
+    </None>
+  </ItemGroup>
+</Project>
