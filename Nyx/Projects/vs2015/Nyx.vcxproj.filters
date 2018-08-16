@@ -175,120 +175,6 @@
     <ClCompile Include="..\..\Events\event_manager.cpp">
       <Filter>Events</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\LuaPlus.cpp">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\LuaPlusAddons.c">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\LuaState_DumpObject.cpp">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lua.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\luac.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lundump.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lutf8lib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lvm.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lzio.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lapi.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lauxlib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lbaselib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lbitlib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lcode.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lcorolib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lctype.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldblib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldebug.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldo.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldump.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lfunc.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lgc.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\linit.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\liolib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\llex.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lmathlib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lmem.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\loadlib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lobject.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lopcodes.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\loslib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lparser.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lstate.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lstring.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lstrlib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ltable.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ltablib.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ltm.c">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Cache\resource.cpp">
       <Filter>Cache</Filter>
     </ClCompile>
@@ -370,14 +256,128 @@
     <ClCompile Include="..\..\UI\label.cpp">
       <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\stb\stb_image.c">
-      <Filter>Thirdparty\stb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\thirdparty\stb\stb_vorbis.c">
-      <Filter>Thirdparty\stb</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\mesh.cpp">
       <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\LuaPlus.cpp">
+      <Filter>Thirdparty\LuaPlus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\LuaPlusAddons.c">
+      <Filter>Thirdparty\LuaPlus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\LuaState_DumpObject.cpp">
+      <Filter>Thirdparty\LuaPlus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lapi.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lauxlib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lbaselib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lbitlib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lcode.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lcorolib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lctype.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ldblib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ldebug.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ldo.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ldump.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lfunc.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lgc.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\linit.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\liolib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\llex.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lmathlib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lmem.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\loadlib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lobject.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lopcodes.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\loslib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lparser.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lstate.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lstring.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lstrlib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ltable.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ltablib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ltm.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lua.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\luac.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lundump.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lutf8lib.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lvm.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lzio.c">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\stb\stb_image.c">
+      <Filter>Thirdparty\stb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\thirdparty\stb\stb_vorbis.c">
+      <Filter>Thirdparty\stb</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -491,138 +491,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Events\event_manager.h">
       <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaHelper_Object.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaHelper_StackObject.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaObject.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlus.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlusCD.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlusConfig.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlusInternal.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStackObject.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaState.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStateCD.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStateOutFile.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStateOutString.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaTableIterator.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaAutoBlock.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaCall.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaFunction.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaHelper.h">
-      <Filter>Thirdparty\LuaPlus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ltm.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lua.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lua.hpp">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\luaconf.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lualib.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lundump.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lvm.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lzio.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lapi.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lauxlib.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lcode.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lctype.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ldebug.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ldo.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lfunc.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lgc.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\llex.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\llimits.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lmem.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lobject.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lopcodes.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lparser.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lprefix.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lstate.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lstring.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ltable.h">
-      <Filter>Thirdparty\LuaPlus\Lua</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Cache\iresources.h">
       <Filter>Cache</Filter>
@@ -741,59 +609,191 @@
     <ClInclude Include="..\..\UI\label.h">
       <Filter>UI</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_image.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaAutoBlock.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_image_resize.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaCall.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_image_write.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaFunction.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_leakcheck.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaHelper.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_perlin.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaHelper_Object.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_rect_pack.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaHelper_StackObject.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_textedit.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaObject.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_tilemap_editor.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaPlus.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_truetype.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaPlusCD.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stretchy_buffer.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaPlusConfig.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaPlusInternal.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_c_lexer.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStackObject.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_divide.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_dxt.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaState.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_easy_font.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStateCD.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_herringbone_wang_tile.h">
-      <Filter>Thirdparty\stb</Filter>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStateOutFile.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\Json\json.h">
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStateOutString.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaTableIterator.h">
+      <Filter>Thirdparty\LuaPlus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lapi.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lauxlib.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lcode.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lctype.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\ldebug.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\ldo.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lfunc.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lgc.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\llex.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\llimits.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lmem.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lobject.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lopcodes.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lparser.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lprefix.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lstate.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lstring.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\ltable.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\ltm.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lua.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lua.hpp">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\luaconf.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lualib.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lundump.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lvm.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lzio.h">
+      <Filter>Thirdparty\LuaPlus\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\Json\json.h">
       <Filter>Thirdparty\Json</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\thirdparty\Json\json.hpp">
+    <ClInclude Include="..\..\..\..\thirdparty\Json\json.hpp">
       <Filter>Thirdparty\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_c_lexer.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_divide.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_dxt.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_easy_font.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_herringbone_wang_tile.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_image.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_image_resize.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_image_write.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_leakcheck.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_perlin.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_rect_pack.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_textedit.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_tilemap_editor.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_truetype.h">
+      <Filter>Thirdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stretchy_buffer.h">
+      <Filter>Thirdparty\stb</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -883,20 +883,23 @@
     <None Include="..\..\..\Resources\create_dest_tree.bat">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaObject.inl">
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaCall.inl">
       <Filter>Thirdparty\LuaPlus</Filter>
     </None>
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaStackObject.inl">
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaObject.inl">
       <Filter>Thirdparty\LuaPlus</Filter>
     </None>
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.inl">
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaStackObject.inl">
       <Filter>Thirdparty\LuaPlus</Filter>
     </None>
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaState.inl">
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.inl">
       <Filter>Thirdparty\LuaPlus</Filter>
     </None>
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaCall.inl">
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaState.inl">
       <Filter>Thirdparty\LuaPlus</Filter>
+    </None>
+    <None Include="..\..\..\..\thirdparty\stb\README.md">
+      <Filter>Thirdparty\stb</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -905,6 +908,9 @@
     </Text>
     <Text Include="..\..\..\Resources\Fonts\Apache License.txt">
       <Filter>Resource Files\Fonts</Filter>
+    </Text>
+    <Text Include="..\..\..\..\thirdparty\LuaPlus\License.txt">
+      <Filter>Thirdparty\LuaPlus</Filter>
     </Text>
   </ItemGroup>
 </Project>

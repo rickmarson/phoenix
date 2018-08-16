@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -13,20 +13,20 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6140A3B0-BC5C-4999-AF3D-06E058AD0053}</ProjectGuid>
     <RootNamespace>Nyx</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ProjectName>Phoenix</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -59,7 +59,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\;..\..\Cache;..\..\Events;..\..\Math;..\..\Utils;..\..\Scripts;..\..\Scene;..\..\Renderer;..\..\Physics;..\..\UI;..\..\..\thirdparty;..\..\..\thirdparty\SDL;..\..\..\thirdparty\SDL\SDL_ttf;..\..\..\thirdparty\Bullet;..\..\..\thirdparty\LuaPlus\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\;..\..\Cache;..\..\Events;..\..\Math;..\..\Utils;..\..\Scripts;..\..\Scene;..\..\Renderer;..\..\Physics;..\..\UI;..\..\..\..\thirdparty;..\..\..\..\thirdparty\SDL;..\..\..\..\thirdparty\SDL\SDL_ttf;..\..\..\..\thirdparty\Bullet;..\..\..\..\thirdparty\LuaPlus\src</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4305;4244;4251;4316;</DisableSpecificWarnings>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;__STATIC_BUILD__;DEBUG;__USE_D3D11__</PreprocessorDefinitions>
       <ForcedIncludeFiles>config.h</ForcedIncludeFiles>
@@ -78,7 +78,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\;..\..\Cache;..\..\Events;..\..\Math;..\..\Utils;..\..\Scripts;..\..\Scene;..\..\Renderer;..\..\Physics;..\..\UI;..\..\..\thirdparty;..\..\..\thirdparty\SDL;..\..\..\thirdparty\SDL\SDL_ttf;..\..\..\thirdparty\Bullet;..\..\..\thirdparty\LuaPlus\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\;..\..\Cache;..\..\Events;..\..\Math;..\..\Utils;..\..\Scripts;..\..\Scene;..\..\Renderer;..\..\Physics;..\..\UI;..\..\..\..\thirdparty;..\..\..\..\thirdparty\SDL;..\..\..\..\thirdparty\SDL\SDL_ttf;..\..\..\..\thirdparty\Bullet;..\..\..\..\thirdparty\LuaPlus\src</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4305;4244;4251;4316;</DisableSpecificWarnings>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;__STATIC_BUILD__;__USE_D3D11__</PreprocessorDefinitions>
       <ForcedIncludeFiles>config.h</ForcedIncludeFiles>
@@ -93,46 +93,46 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\LuaPlus.cpp" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\LuaPlusAddons.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\LuaState_DumpObject.cpp" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lapi.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lauxlib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lbaselib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lbitlib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lcode.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lcorolib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lctype.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldblib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldebug.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldo.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ldump.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lfunc.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lgc.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\linit.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\liolib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\llex.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lmathlib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lmem.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\loadlib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lobject.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lopcodes.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\loslib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lparser.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lstate.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lstring.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lstrlib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ltable.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ltablib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\ltm.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lua.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\luac.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lundump.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lutf8lib.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lvm.c" />
-    <ClCompile Include="..\..\..\thirdparty\LuaPlus\src\lzio.c" />
-    <ClCompile Include="..\..\..\thirdparty\stb\stb_image.c" />
-    <ClCompile Include="..\..\..\thirdparty\stb\stb_vorbis.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\LuaPlus.cpp" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\LuaPlusAddons.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\LuaState_DumpObject.cpp" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lapi.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lauxlib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lbaselib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lbitlib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lcode.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lcorolib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lctype.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ldblib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ldebug.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ldo.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ldump.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lfunc.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lgc.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\linit.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\liolib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\llex.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lmathlib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lmem.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\loadlib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lobject.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lopcodes.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\loslib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lparser.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lstate.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lstring.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lstrlib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ltable.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ltablib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\ltm.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lua.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\luac.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lundump.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lutf8lib.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lvm.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\LuaPlus\src\lzio.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\stb\stb_image.c" />
+    <ClCompile Include="..\..\..\..\thirdparty\stb\stb_vorbis.c" />
     <ClCompile Include="..\..\application.cpp" />
     <ClCompile Include="..\..\Cache\resource.cpp" />
     <ClCompile Include="..\..\Cache\resource_cache.cpp" />
@@ -220,68 +220,68 @@
     <ClCompile Include="..\..\window_state.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\thirdparty\Json\json.h" />
-    <ClInclude Include="..\..\..\thirdparty\Json\json.hpp" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaAutoBlock.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaCall.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaFunction.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaHelper.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaHelper_Object.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaHelper_StackObject.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaObject.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlus.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlusCD.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlusConfig.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaPlusInternal.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStackObject.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaState.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStateCD.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStateOutFile.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaStateOutString.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\LuaTableIterator.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lapi.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lauxlib.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lcode.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lctype.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ldebug.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ldo.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lfunc.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lgc.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\llex.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\llimits.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lmem.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lobject.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lopcodes.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lparser.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lprefix.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lstate.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lstring.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ltable.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\ltm.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lua.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lua.hpp" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\luaconf.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lualib.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lundump.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lvm.h" />
-    <ClInclude Include="..\..\..\thirdparty\LuaPlus\src\lzio.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_c_lexer.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_divide.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_dxt.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_easy_font.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_herringbone_wang_tile.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_image.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_image_resize.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_image_write.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_leakcheck.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_perlin.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_rect_pack.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_textedit.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_tilemap_editor.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stb_truetype.h" />
-    <ClInclude Include="..\..\..\thirdparty\stb\stretchy_buffer.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaAutoBlock.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaCall.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaFunction.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaHelper.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaHelper_Object.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaHelper_StackObject.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaObject.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaPlus.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaPlusCD.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaPlusConfig.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaPlusInternal.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStackObject.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaState.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStateCD.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStateOutFile.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaStateOutString.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\LuaTableIterator.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lapi.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lauxlib.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lcode.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lctype.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\ldebug.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\ldo.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lfunc.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lgc.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\llex.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\llimits.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lmem.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lobject.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lopcodes.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lparser.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lprefix.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lstate.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lstring.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\ltable.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\ltm.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lua.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lua.hpp" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\luaconf.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lualib.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lundump.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lvm.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\LuaPlus\src\lzio.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\Json\json.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\Json\json.hpp" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_c_lexer.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_divide.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_dxt.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_easy_font.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_herringbone_wang_tile.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_image.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_image_resize.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_image_write.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_leakcheck.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_perlin.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_rect_pack.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_textedit.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_tilemap_editor.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stb_truetype.h" />
+    <ClInclude Include="..\..\..\..\thirdparty\stb\stretchy_buffer.h" />
     <ClInclude Include="..\..\application.h" />
     <ClInclude Include="..\..\Cache\iresources.h" />
     <ClInclude Include="..\..\Cache\resource.h" />
@@ -561,6 +561,12 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaCall.inl" />
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaObject.inl" />
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaStackObject.inl" />
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.inl" />
+    <None Include="..\..\..\..\thirdparty\LuaPlus\LuaState.inl" />
+    <None Include="..\..\..\..\thirdparty\stb\README.md" />
     <None Include="..\..\..\Resources\create_dest_tree.bat">
       <FileType>Document</FileType>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Creates Resources directory tree in output dir, if necessary</Message>
@@ -655,11 +661,6 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\..\bin\Resources\Models\%(Filename)%(Extension);%(Outputs)</Outputs>
     </CustomBuild>
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaCall.inl" />
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaObject.inl" />
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaStackObject.inl" />
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaStackTableIterator.inl" />
-    <None Include="..\..\..\thirdparty\LuaPlus\LuaState.inl" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\Resources\Fonts\Capture_it.ttf">
@@ -690,6 +691,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\..\..\..\thirdparty\LuaPlus\License.txt" />
     <Text Include="..\..\..\Resources\Fonts\Apache License.txt" />
     <Text Include="..\..\..\Resources\Fonts\Cpr.Sparhelt font License.txt">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)\..\bin\Resources\Fonts"</ExcludedFromBuild>

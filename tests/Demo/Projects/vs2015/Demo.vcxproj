@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -14,18 +14,19 @@
     <ProjectGuid>{8AF15526-8413-46E5-9A4B-0F630D56E46B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Demo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -58,13 +59,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;__DEBUG__;__STATIC_BUILD__</PreprocessorDefinitions>
       <DisableSpecificWarnings>4305;4244;4251;4316</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>..\..\..\..\Game;..\..\..\..\Nyx;..\..\;..\..\..\..\Nyx\Cache;..\..\..\..\Nyx\Events;..\..\..\..\Nyx\Math;..\..\..\..\Nyx\Utils;..\..\..\..\Nyx\Scripts;..\..\..\..\Nyx\Scene;..\..\..\..\Nyx\Renderer;..\..\..\..\Nyx\Physics;..\..\..\..\Nyx\UI;..\..\..\..\thirdparty;..\..\..\..\thirdparty\Bullet;..\..\..\..\thirdparty\SDL</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\Game;..\..\..\..\Nyx;..\..\;..\..\..\..\Nyx\Cache;..\..\..\..\Nyx\Events;..\..\..\..\Nyx\Math;..\..\..\..\Nyx\Utils;..\..\..\..\Nyx\Scripts;..\..\..\..\Nyx\Scene;..\..\..\..\Nyx\Renderer;..\..\..\..\Nyx\Physics;..\..\..\..\Nyx\UI;..\..\..\..\..\thirdparty;..\..\..\..\..\thirdparty\Bullet;..\..\..\..\..\thirdparty\SDL</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(SolutionDir)\..\..\Nyx\config.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;d3d11.lib;$(SolutionDir)..\..\thirdparty\Win\glew32.lib;$(SolutionDir)..\..\thirdparty\Win\physfs.lib;$(SolutionDir)..\..\thirdparty\Win\SDL2.lib;$(SolutionDir)..\..\thirdparty\Win\SDL2main.lib;$(SolutionDir)..\..\thirdparty\Win\SDL2_ttf.lib;$(SolutionDir)..\..\thirdparty\Win\BulletCollision_vs2010_debug.lib;$(SolutionDir)..\..\thirdparty\Win\BulletDynamics_vs2010_debug.lib;$(SolutionDir)..\..\thirdparty\Win\BulletSoftBody_vs2010_debug.lib;$(SolutionDir)..\..\thirdparty\Win\LinearMath_vs2010_debug.lib;$(SolutionDir)..\..\thirdparty\Win\OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;d3d11.lib;$(SolutionDir)..\..\..\thirdparty\Win\glew32.lib;$(SolutionDir)..\..\..\thirdparty\Win\physfs.lib;$(SolutionDir)..\..\..\thirdparty\Win\SDL2.lib;$(SolutionDir)..\..\..\thirdparty\Win\SDL2main.lib;$(SolutionDir)..\..\..\thirdparty\Win\SDL2_ttf.lib;$(SolutionDir)..\..\..\thirdparty\Win\BulletCollision_vs2010_debug.lib;$(SolutionDir)..\..\..\thirdparty\Win\BulletDynamics_vs2010_debug.lib;$(SolutionDir)..\..\..\thirdparty\Win\BulletSoftBody_vs2010_debug.lib;$(SolutionDir)..\..\..\thirdparty\Win\LinearMath_vs2010_debug.lib;$(SolutionDir)..\..\..\thirdparty\Win\OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/ignore:4099 /NODEFAULTLIB:msvcrt.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <CustomBuildStep>
@@ -84,7 +85,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;__STATIC_BUILD__</PreprocessorDefinitions>
       <DisableSpecificWarnings>4305;4244;4251;4316</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>..\..\..\..\Game;..\..\..\..\Nyx;..\..\;..\..\..\..\Nyx\Cache;..\..\..\..\Nyx\Events;..\..\..\..\Nyx\Math;..\..\..\..\Nyx\Utils;..\..\..\..\Nyx\Scripts;..\..\..\..\Nyx\Scene;..\..\..\..\Nyx\Renderer;..\..\..\..\Nyx\Physics;..\..\..\..\Nyx\UI;..\..\..\..\thirdparty;..\..\..\..\thirdparty\Bullet;..\..\..\..\thirdparty\SDL</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\Game;..\..\..\..\Nyx;..\..\;..\..\..\..\Nyx\Cache;..\..\..\..\Nyx\Events;..\..\..\..\Nyx\Math;..\..\..\..\Nyx\Utils;..\..\..\..\Nyx\Scripts;..\..\..\..\Nyx\Scene;..\..\..\..\Nyx\Renderer;..\..\..\..\Nyx\Physics;..\..\..\..\Nyx\UI;..\..\..\..\..\thirdparty;..\..\..\..\..\thirdparty\Bullet;..\..\..\..\..\thirdparty\SDL</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(SolutionDir)\..\..\Nyx\config.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
@@ -92,7 +93,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;d3d11.lib;$(SolutionDir)..\..\thirdparty\Win\glew32.lib;$(SolutionDir)..\..\thirdparty\Win\physfs.lib;$(SolutionDir)..\..\thirdparty\Win\SDL2.lib;$(SolutionDir)..\..\thirdparty\Win\SDL2main.lib;$(SolutionDir)..\..\thirdparty\Win\SDL2_ttf.lib;$(SolutionDir)..\..\thirdparty\Win\BulletCollision_vs2010_debug.lib;$(SolutionDir)..\..\thirdparty\Win\BulletDynamics_vs2010_debug.lib;$(SolutionDir)..\..\thirdparty\Win\BulletSoftBody_vs2010_debug.lib;$(SolutionDir)..\..\thirdparty\Win\LinearMath_vs2010_debug.lib;$(SolutionDir)..\..\thirdparty\Win\OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;d3d11.lib;$(SolutionDir)..\..\..\thirdparty\Win\glew32.lib;$(SolutionDir)..\..\..\thirdparty\Win\physfs.lib;$(SolutionDir)..\..\..\thirdparty\Win\SDL2.lib;$(SolutionDir)..\..\..\thirdparty\Win\SDL2main.lib;$(SolutionDir)..\..\..\thirdparty\Win\SDL2_ttf.lib;$(SolutionDir)..\..\..\thirdparty\Win\BulletCollision_vs2010_debug.lib;$(SolutionDir)..\..\..\thirdparty\Win\BulletDynamics_vs2010_debug.lib;$(SolutionDir)..\..\..\thirdparty\Win\BulletSoftBody_vs2010_debug.lib;$(SolutionDir)..\..\..\thirdparty\Win\LinearMath_vs2010_debug.lib;$(SolutionDir)..\..\..\thirdparty\Win\OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/NODEFAULTLIB:msvcrt.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <CustomBuildStep>
@@ -120,7 +121,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\..\thirdparty\Win\FreeImage.dll">
+    <CustomBuild Include="..\..\..\..\..\thirdparty\Win\FreeImage.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
@@ -131,7 +132,7 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying DLLs</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extensions);%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\..\..\thirdparty\Win\glew32.dll">
+    <CustomBuild Include="..\..\..\..\..\thirdparty\Win\glew32.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
@@ -142,7 +143,7 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying DLLs</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extensions);%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\..\..\thirdparty\Win\physfs.dll">
+    <CustomBuild Include="..\..\..\..\..\thirdparty\Win\physfs.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
@@ -189,7 +190,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\..\thirdparty\Win\SDL2.dll">
+    <CustomBuild Include="..\..\..\..\..\thirdparty\Win\SDL2.dll">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)"</Command>
@@ -198,7 +199,7 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying DLLs</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying DLLs</Message>
     </CustomBuild>
-    <CustomBuild Include="..\..\..\..\thirdparty\Win\SDL2_ttf.dll">
+    <CustomBuild Include="..\..\..\..\..\thirdparty\Win\SDL2_ttf.dll">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)"</Command>
@@ -209,7 +210,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\..\thirdparty\Win\libfreetype-6.dll">
+    <CustomBuild Include="..\..\..\..\..\thirdparty\Win\libfreetype-6.dll">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)"</Command>
@@ -218,7 +219,7 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename)%(Extensions);%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extensions);%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\..\..\thirdparty\Win\zlib1.dll">
+    <CustomBuild Include="..\..\..\..\..\thirdparty\Win\zlib1.dll">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">COPY "%(FullPath)" "$(OutDir)"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COPY "%(FullPath)" "$(OutDir)"</Command>
