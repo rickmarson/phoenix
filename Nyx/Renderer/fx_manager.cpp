@@ -73,7 +73,9 @@ void FXManager::Initialize(SDL_Window *win, SDL_SysWMinfo winInfo, IRenderer* re
 		{
 			mCLDevice = devices[dev];
 			gpu_found = true;
-			break;
+			// hack for the Surface: use the last GPU found (NVIDIA) as the first listed device is the Intel integrated one but OpenGL is initialized with the dedicated chip.
+			// Should really save the device used to initialse the OpenGL context and find it here. 
+			//break; 
 		}
 		else if (type == CL_DEVICE_TYPE_CPU)
 			cl_cpu = devices[dev];
