@@ -12,6 +12,8 @@
 #endif
 #include "Cache/resource_cache.h"
 #include "irenderer.h"
+#include <vector>
+#include <utility>
 
 #define MAX_CL_DEVICES 5
 
@@ -41,53 +43,88 @@ void FXManager::Initialize(SDL_Window *win, SDL_SysWMinfo winInfo, IRenderer* re
     mRenderer = renderer;
     
 	//init CL context from GL context
+	cl_uint platform_count;
+	cl_platform_id platforms[MAX_CL_DEVICES];
 	cl_device_id devices[MAX_CL_DEVICES];
-	cl_uint dev_count = 0; //the actual number of available devices.
-
-	mLastError = clGetPlatformIDs(1, &mCLPlatform, NULL);
+	cl_uint dev_count = 0;
+	typedef std::pair<cl_platform_id, cl_device_id> Device;
+	std::vector<Device> gpu_devices;
+	std::vector<Device> cpu_devices;
+	
+	mLastError = clGetPlatformIDs(MAX_CL_DEVICES, platforms, &platform_count);
 	checkError(mLastError, "Error getting platform IDs");
 
-	dumpPlatformInfo(mCLPlatform);
+	for (int i = 0; i < platform_count; i++)
+	{
+		dumpPlatformInfo(platforms[i]);
 
-	mLastError = clGetDeviceIDs(mCLPlatform, CL_DEVICE_TYPE_ALL, MAX_CL_DEVICES, devices, &dev_count);
-	checkError(mLastError, "Could not find a device.");
+		mLastError = clGetDeviceIDs(platforms[i], CL_DEVICE_TYPE_ALL, MAX_CL_DEVICES, devices, &dev_count);
+		
+		if (mLastError != CL_SUCCESS || dev_count == 0)
+			continue;
 
-	//one more safety check
-	if (dev_count == 0)
+		for (cl_uint dev = 0; dev < dev_count; dev++)
+		{
+			cl_device_type type;
+			size_t size;
+
+			LogManager::GetInstance()->LogMessage("*** CL Device Found: ****");
+			dumpDeviceInfo(devices[dev]);
+			LogManager::GetInstance()->LogMessage("*******");
+
+			clGetDeviceInfo(devices[dev], CL_DEVICE_TYPE, sizeof(type), &type, &size);
+			
+			if (type == CL_DEVICE_TYPE_GPU)
+			{
+				gpu_devices.push_back({ platforms[i], devices[dev] });
+			}
+			else if (type == CL_DEVICE_TYPE_CPU)
+			{
+				cpu_devices.push_back({ platforms[i], devices[dev] });
+			}
+		}
+	}
+	
+	if (gpu_devices.empty() && cpu_devices.empty())
 	{
 		LogManager::GetInstance()->LogMessage("Error! No devices found. Terminating Program.");
 		exit(-1);
 	}
+	
 
-	//search for a GPU
-	bool gpu_found = false;
-	cl_device_id cl_cpu = nullptr;
+	// hack for the multi-gpu laptop: look for a gpu device with NVIDIA as vendor name. 
+	// The OpenGL context is usually initialized with the dedicated chip, whereas we might end up selecting the integrated chip here, causing a crash.
+	// Should really save the device used to initialse the OpenGL context and find it here. Obviously won't work for Radeon cards.
+	char buffer[255];
+	size_t size;
+	bool foundNvidiaGPU = false;
 
-	for (cl_uint dev = 0; dev < dev_count; dev++)
+	for (auto gpu : gpu_devices)
 	{
-		cl_device_type type;
-		size_t size;
+		clGetDeviceInfo(gpu.second, CL_DEVICE_VENDOR, 255, buffer, &size);
 
-		clGetDeviceInfo(devices[dev], CL_DEVICE_TYPE, sizeof(type), &type, &size);
-		if (type == CL_DEVICE_TYPE_GPU)
+		if (std::string(buffer).find("NVIDIA") != std::string::npos)
 		{
-			mCLDevice = devices[dev];
-			gpu_found = true;
-			// hack for the Surface: use the last GPU found (NVIDIA) as the first listed device is the Intel integrated one but OpenGL is initialized with the dedicated chip.
-			// Should really save the device used to initialse the OpenGL context and find it here. 
-			//break; 
+			mCLPlatform = gpu.first;
+			mCLDevice = gpu.second;
+			foundNvidiaGPU = true;
+			break;
 		}
-		else if (type == CL_DEVICE_TYPE_CPU)
-			cl_cpu = devices[dev];
+	}
+	
+	//fall back to CPU if no suitable GPU was found
+	// grab the first CPU, unlikely there will be more than one
+	if (!foundNvidiaGPU)
+	{
+		mCLPlatform = cpu_devices.front().first;
+		mCLDevice = cpu_devices.front().second;
 	}
 
-	//fall back to CPU if no suitable GPU was found
-	if (!gpu_found)
-		mCLDevice = cl_cpu;
-
+	LogManager::GetInstance()->LogMessage("*** Selected CL Device ****");
 	dumpDeviceInfo(mCLDevice);
-
-    mCLContext = mRenderer->InitialiseCLContextFromGLContext( &mCLDevice, mCLPlatform, cl_cpu, mLastError );
+	LogManager::GetInstance()->LogMessage("*******");
+	
+    mCLContext = mRenderer->InitialiseCLContextFromGLContext( &mCLDevice, mCLPlatform, cpu_devices.front().second, mLastError );
 
 	mCommandQueue = clCreateCommandQueue(mCLContext, mCLDevice, 0, &mLastError);
 	checkError(mLastError, "Error generating command queue.");
