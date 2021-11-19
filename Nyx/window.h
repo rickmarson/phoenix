@@ -12,9 +12,9 @@ Window
 #include <SDL2_ttf/SDL_ttf.h>
 #include <SDL2/SDL_syswm.h>
 #else
-#include "SDL/SDL.h"
-#include "SDL/SDL_ttf/SDL_ttf.h"
-#include "SDL/SDL_syswm.h"
+#include "SDL.h"
+#include "SDL_ttf.h"
+#include "SDL_syswm.h"
 #endif
 
 #include "window_state.h"

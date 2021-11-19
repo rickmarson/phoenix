@@ -11,7 +11,7 @@
 #if PLATFORM_MAC
 #include <SDL2_ttf/SDL_ttf.h>
 #else
-#include "SDL/SDL_ttf/SDL_ttf.h"
+#include "SDL_ttf.h"
 #endif
 
 // ****** Textures

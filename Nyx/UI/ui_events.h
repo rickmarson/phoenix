@@ -8,7 +8,7 @@
 #if PLATFORM_MAC
 #include <SDL2/SDL_keycode.h>
 #else
-#include "SDL/SDL_keycode.h"
+#include "SDL_keycode.h"
 #endif
 
 enum class UI_EVENT_ID

@@ -30,7 +30,7 @@ const std::string LINE_END = "\n";
 
 #else
 
-#include "SDL/SDL_platform.h"
+#include <SDL_platform.h>
 
 #endif
 

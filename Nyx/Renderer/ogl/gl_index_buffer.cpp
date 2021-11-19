@@ -5,7 +5,7 @@
  */
 
 #include "gl_index_buffer.h"
-#include "Glew/glew.h"
+#include "glew.h"
 #include "gl_utils.h"
 
 namespace NYX {

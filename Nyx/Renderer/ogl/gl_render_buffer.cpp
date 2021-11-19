@@ -8,7 +8,7 @@
 #include "gl_texture.h"
 #include "gl_renderer.h"
 #include "gl_utils.h"
-#include "Glew/glew.h"
+#include "glew.h"
 
 namespace NYX {
 

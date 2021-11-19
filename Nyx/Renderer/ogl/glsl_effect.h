@@ -7,12 +7,12 @@ GLSL Shader Backend
 #ifndef GLSL_EFFECT_H
 #define GLSL_EFFECT_H
 
-#include "Glew/glew.h"
+#include "glew.h"
 
 #if PLATFORM_MAC
 #include <OpenGL/OpenGL.h>
 #else
-#include "SDL/SDL_opengl.h"
+#include "SDL_opengl.h"
 #endif
 
 #include "../effect.h"

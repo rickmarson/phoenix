@@ -6,7 +6,7 @@
 
 #include "gl_vertex_array_object.h"
 #include "Renderer/ogl/glsl_effect.h"
-#include "Glew/glew.h"
+#include "glew.h"
 #include "gl_utils.h"
 
 namespace NYX {

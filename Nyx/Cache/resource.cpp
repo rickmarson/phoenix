@@ -3,10 +3,11 @@
  */
 
 #include "resource.h"
-#include "stb/stb_image.h"
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 #include "Renderer/texture.h"
 #include "Utils/log_manager.h"
-#include "PhysFS/physfs.h"
+#include "physfs.h"
 #include "model.h"
 
 //---------------------------------------------------------------------------

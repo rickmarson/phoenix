@@ -42,7 +42,7 @@
 
 #include "model.h"
 #include "Cache/resource_cache.h"
-#include "PhysFS/physfs.h"
+#include "physfs.h"
 
 // added to support reading from a memory stream
 #include <iostream>

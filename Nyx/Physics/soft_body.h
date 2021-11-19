@@ -8,9 +8,9 @@
  */
 
 #include "body.h"
-#include "Bullet/btBulletDynamicsCommon.h"
-#include "Bullet/BulletSoftBody/btSoftBody.h"
-#include "Bullet/BulletSoftBody/btSoftBodyHelpers.h"
+#include "btBulletDynamicsCommon.h"
+#include "BulletSoftBody/btSoftBody.h"
+#include "BulletSoftBody/btSoftBodyHelpers.h"
 
 namespace NYX {
 

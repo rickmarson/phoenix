@@ -5,7 +5,7 @@
 #include "resource_cache.h"
 #include "Utils/file_manager.h"
 #include "Utils/log_manager.h"
-#include "PhysFS/physfs.h"
+#include "physfs.h"
 
 namespace NYX {
 

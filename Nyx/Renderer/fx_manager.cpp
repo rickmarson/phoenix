@@ -8,7 +8,7 @@
 #if PLATFORM_MAC
 #include <OpenGL/OpenGL.h>
 #else
-#include "SDL/SDL_platform.h"
+#include "SDL_platform.h"
 #endif
 #include "Cache/resource_cache.h"
 #include "irenderer.h"
@@ -54,7 +54,7 @@ void FXManager::Initialize(SDL_Window *win, SDL_SysWMinfo winInfo, IRenderer* re
 	mLastError = clGetPlatformIDs(MAX_CL_DEVICES, platforms, &platform_count);
 	checkError(mLastError, "Error getting platform IDs");
 
-	for (int i = 0; i < platform_count; i++)
+	for (int i = 0; i < int(platform_count); i++)
 	{
 		dumpPlatformInfo(platforms[i]);
 
@@ -124,9 +124,10 @@ void FXManager::Initialize(SDL_Window *win, SDL_SysWMinfo winInfo, IRenderer* re
 	dumpDeviceInfo(mCLDevice);
 	LogManager::GetInstance()->LogMessage("*******");
 	
-    mCLContext = mRenderer->InitialiseCLContextFromGLContext( &mCLDevice, mCLPlatform, cpu_devices.front().second, mLastError );
+	cl_device_id cpu_fallback = cpu_devices.empty() ? cl_device_id() : cpu_devices.front().second;
+    mCLContext = mRenderer->InitialiseCLContextFromGLContext( &mCLDevice, mCLPlatform, cpu_fallback, mLastError );
 
-	mCommandQueue = clCreateCommandQueue(mCLContext, mCLDevice, 0, &mLastError);
+	mCommandQueue = clCreateCommandQueueWithProperties(mCLContext, mCLDevice, 0, &mLastError);
 	checkError(mLastError, "Error generating command queue.");
 }
 

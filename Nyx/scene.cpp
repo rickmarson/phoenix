@@ -16,7 +16,9 @@
 #include "Math/vector4.h"
 #include "Math/matrix3x3.h"
 
-#include "Json/json.h"
+#include "json.hpp"
+
+using nlohmann::json;
 
 namespace NYX {
     
@@ -171,7 +173,7 @@ bool Scene::SetupScene( std::string scene_name )
            scene->mShowTitle = iterator.value();
            if ( scene->mShowTitle )
            {
-               scene->mTitle = *(json_source.find("title"));
+               scene->mTitle = json_source["title"].get<std::string>();
                std::string title = scene->mTitle.empty() ? scene_name : scene->mTitle;
                WidgetPtr title_label = Label::Create(mRenderer);
                ((Label*)title_label.get())->SetPosition( 750, 20 );
@@ -351,7 +353,7 @@ void CameraParser::operator()( const json &camera_source, SceneNodePtr parent, I
         else if ( iterator.key() == "target" )
         {
             // targets need to be resolved when all the objects have been set up
-            mTargetName = iterator.value();
+            mTargetName = iterator.value().get<std::string>();
         }
     }
     
@@ -423,15 +425,15 @@ void SkyBoxParser::operator()( const json &skybox_source, RootNodePtr root_node,
     {
         if ( iterator.key() == "cube texture" )
         {
-            texture_name = iterator.value();
+            texture_name = iterator.value().get<std::string>();
         }
         else if ( iterator.key() == "shader name" )
         {
-            shader_name = iterator.value();
+            shader_name = iterator.value().get<std::string>();
         }
         else if ( iterator.key() == "scale" )
         {
-            scale = iterator.value();
+            scale = iterator.value().get<float>();
         }
     }
     
@@ -579,14 +581,14 @@ void ParticleEmitterParser::operator()(const json &fx_source, SceneNodePtr paren
         {
             auto kernel_source = iterator.value();
 
-            program_file = *(kernel_source.find("file name"));
+            program_file = kernel_source["file name"].get<std::string>();
             program_file += KERNEL_EXTENSION;
             
-            kernel = *(kernel_source.find("kernel name"));
+            kernel = kernel_source["kernel name"].get<std::string>();
         }
         else if ( iterator.key() == "material" )
         {
-            material_name = iterator.value();
+            material_name = iterator.value().get<std::string>();
             material_name += MATERIAL_EXTENSION;
         }
         else if ( iterator.key() == "light" )

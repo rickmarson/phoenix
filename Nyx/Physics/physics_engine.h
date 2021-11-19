@@ -11,15 +11,15 @@
 #include "rigid_body.h"
 #include "soft_body.h"
 
-#include "Bullet/btBulletDynamicsCommon.h"
+#include "btBulletDynamicsCommon.h"
 
-#include "Bullet/BulletSoftBody/btSoftRigidDynamicsWorld.h"
-#include "Bullet/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.h"
-#include "Bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h"
-#include "Bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h"
+#include "BulletSoftBody/btSoftRigidDynamicsWorld.h"
+#include "BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.h"
+#include "BulletSoftBody/btSoftRigidCollisionAlgorithm.h"
+#include "BulletSoftBody/btSoftSoftCollisionAlgorithm.h"
 
 //default cpu soft body solver. see bullet/multithreaded for GPGPU soft body solvers. 
-#include "Bullet/BulletSoftBody/btDefaultSoftBodySolver.h"
+#include "BulletSoftBody/btDefaultSoftBodySolver.h"
 
 #include <vector>
 

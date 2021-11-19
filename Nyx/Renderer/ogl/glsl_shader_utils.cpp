@@ -7,7 +7,7 @@
 #include "glsl_shader_utils.h"
 #include "Utils/file_manager.h"
 
-#include "Glew/glew.h"
+#include "glew.h"
 #include <map>
 
 using namespace std;

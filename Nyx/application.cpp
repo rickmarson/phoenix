@@ -10,7 +10,9 @@ Application Class
 #include "camera_fp.h"
 #include "camera_tp.h"
 
-#include "Json/json.h"
+#include "json.hpp"
+
+using nlohmann::json;
 
 namespace NYX {
 
@@ -189,13 +191,13 @@ void Application::LoadConfig( std::string file_name )
     }
     
     // read window config options
-    auto window = *(config_source.find("window"));
+    const auto& window = config_source["window"];
 
-    mWindowProps.title = *(window.find("title"));
-    mWindowProps.width = *(window.find("width"));
-    mWindowProps.height = *(window.find("height"));
-    mWindowProps.depth = *(window.find("depth"));
-    std::string backend_str = *(window.find("backend"));
+    mWindowProps.title = window["title"].get<std::string>();
+    mWindowProps.width = window["width"].get<int>();
+    mWindowProps.height = window["height"].get<int>();
+    mWindowProps.depth = window["depth"].get<int>();
+    std::string backend_str = window["backend"].get<std::string>();
     
     if ( backend_str == "OpenGL" )
     {

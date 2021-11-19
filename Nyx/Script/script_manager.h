@@ -7,7 +7,7 @@ Script Manager (LUA)
  
 */
 
-#include "LuaPlus/LuaPlus.h"
+#include "LuaPlus.h"
 #include "singleton.h"
 
 #include <list>

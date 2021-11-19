@@ -11,7 +11,7 @@
 #endif
 
 
-#include "PhysFS/physfs.h"
+#include "physfs.h"
 
 namespace NYX {
 

@@ -12,9 +12,10 @@ Particle Effects Manager
 #include <SDL2/SDL_syswm.h>
 #include <OpenCL/OpenCL.h>
 #else
-#include "SDL/SDL.h"
-#include "SDL/SDL_syswm.h"
-#include <CL/opencl.h>
+#include "SDL.h"
+#include "SDL_syswm.h"
+#define CL_TARGET_OPENCL_VERSION 200
+#include <CL\opencl.h>
 #endif
 
 #include "log_manager.h"

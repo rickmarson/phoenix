@@ -8,7 +8,7 @@ Generic Physics Body
 */
 
 #include "iphysics_engine.h"
-#include "Bullet/btBulletDynamicsCommon.h"
+#include "btBulletDynamicsCommon.h"
 
 namespace NYX {
 

@@ -14,7 +14,7 @@ Render Factory
 #if PLATFORM_MAC
 #include <SDL2/SDL_platform.h>
 #else
-#include "SDL/SDL_platform.h"
+#include "SDL_platform.h"
 #endif
 
 

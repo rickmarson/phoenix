@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Cache">
+      <UniqueIdentifier>{d2df3668-4251-468d-bd4a-30c312a57a53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Events">
+      <UniqueIdentifier>{09803033-e45a-49b0-8439-372b586ce69f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{b9cbe5e9-5540-4906-b788-cffe4ba22ad9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{5053781c-beea-42e4-9a25-96d90d9ae832}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{411742b6-00e7-451d-9c59-d610b9c1e6e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{27f4cdc1-aa73-41a4-9ccd-622a78b70254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{242d25b9-50f0-47e6-acf4-39cd62dd6f8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{a6ecace1-fa9c-4b29-9203-43f340f7552f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generic">
+      <UniqueIdentifier>{70722f78-366a-48b6-b23e-d1f6c4ad22f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\D3D">
+      <UniqueIdentifier>{f525d2b0-3b82-471b-9b38-c6fdad58a7c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\GL">
+      <UniqueIdentifier>{3bcc3305-c57a-4809-9db2-f09cdf77a459}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\FX Kernels">
+      <UniqueIdentifier>{f3a9fc9a-84b5-43da-bc33-2097a4d1be2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Scripts">
+      <UniqueIdentifier>{a6783b89-13bf-42e5-8367-73a6cacf5eaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Textures">
+      <UniqueIdentifier>{2453878e-7b4f-48bb-aa8c-992575145a75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Models">
+      <UniqueIdentifier>{a584db7c-11f7-445a-ab78-1bd3f076b519}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{b9e642c1-6b99-419d-9a26-728edd85d8f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Fonts">
+      <UniqueIdentifier>{1b85de39-78bc-47eb-818c-c3c068d5872c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{cc8e7577-c589-4ee8-b951-c88b88182b81}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Math\matrix3x3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Math\matrix4x4.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Math\quaternion.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Math\vector2.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Math\vector3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Math\vector4.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Physics\body.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Utils\hash.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\material.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\model.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\particlefx.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\window.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\window_state.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Physics\rigid_body.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Physics\soft_body.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Physics\physics_engine.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\mesh_node.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\model_node.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\particle_node.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\root_node.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\scene_node.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\skybox.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\camera_fp.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\camera_node.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\camera_tp.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\frustum.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scene\light_node.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Script\script_manager.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Utils\log_manager.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Utils\file_manager.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Events\events.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Events\event_manager.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Cache\resource.cpp">
+      <Filter>Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Cache\resource_cache.cpp">
+      <Filter>Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\scene.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\ogl\gl_renderer.cpp">
+      <Filter>Renderer\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\ogl\gl_texture.cpp">
+      <Filter>Renderer\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\ogl\gl_utils.cpp">
+      <Filter>Renderer\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\ogl\gl_vertex_array_object.cpp">
+      <Filter>Renderer\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\ogl\gl_vertex_buffer.cpp">
+      <Filter>Renderer\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\ogl\glsl_effect.cpp">
+      <Filter>Renderer\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\ogl\glsl_shader_utils.cpp">
+      <Filter>Renderer\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\ogl\gl_index_buffer.cpp">
+      <Filter>Renderer\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\ogl\gl_render_buffer.cpp">
+      <Filter>Renderer\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_renderer.cpp">
+      <Filter>Renderer\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_shader_utils.cpp">
+      <Filter>Renderer\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_texture.cpp">
+      <Filter>Renderer\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_vertex_array_object.cpp">
+      <Filter>Renderer\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_vertex_buffer.cpp">
+      <Filter>Renderer\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_effect.cpp">
+      <Filter>Renderer\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_index_buffer.cpp">
+      <Filter>Renderer\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\d3d\d3d11_render_buffer.cpp">
+      <Filter>Renderer\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\fx_manager.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\shader_uniform.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\shader_utils.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Renderer\effect.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UI\ui_manager.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UI\widget.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UI\label.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mesh.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Math\constants.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Math\matrix3x3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Math\matrix4x4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Math\quaternion.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Math\vector2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Math\vector3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Math\vector4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Physics\body.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Utils\hash.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Utils\singleton.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\material.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mesh.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\model.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\particlefx.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\window.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\config.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\window_state.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Physics\physics_engine.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Physics\rigid_body.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Physics\soft_body.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\mesh_node.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\model_node.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\particle_node.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\root_node.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\scene_node.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\skybox.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\camera_fp.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\camera_node.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\camera_tp.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\frustum.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scene\light_node.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Script\script_manager.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Utils\file_manager.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Utils\log_manager.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Events\events.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Events\event_manager.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Cache\iresources.h">
+      <Filter>Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Cache\resource.h">
+      <Filter>Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Cache\resource_cache.h">
+      <Filter>Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Events\ievent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\scene.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Physics\iphysics_engine.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\ogl\gl_renderer.h">
+      <Filter>Renderer\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\ogl\gl_texture.h">
+      <Filter>Renderer\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\ogl\gl_utils.h">
+      <Filter>Renderer\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\ogl\gl_vertex_array_object.h">
+      <Filter>Renderer\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\ogl\gl_vertex_buffer.h">
+      <Filter>Renderer\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\ogl\glsl_effect.h">
+      <Filter>Renderer\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\ogl\glsl_shader_utils.h">
+      <Filter>Renderer\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\ogl\gl_index_buffer.h">
+      <Filter>Renderer\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\ogl\gl_render_buffer.h">
+      <Filter>Renderer\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_render_buffer.h">
+      <Filter>Renderer\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_renderer.h">
+      <Filter>Renderer\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_shader_utils.h">
+      <Filter>Renderer\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_texture.h">
+      <Filter>Renderer\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_vertex_array_object.h">
+      <Filter>Renderer\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_vertex_buffer.h">
+      <Filter>Renderer\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d_renderer.h">
+      <Filter>Renderer\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_effect.h">
+      <Filter>Renderer\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\d3d\d3d11_index_buffer.h">
+      <Filter>Renderer\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\effect.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\fx_manager.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\index_buffer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\irenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\render_buffer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\render_factory.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\shader_uniform.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\shader_utils.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\texture.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\vertex_array_object.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Renderer\vertex_buffer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UI\ui_events.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UI\ui_manager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UI\widget.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UI\label.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\Resources\FXKernels\particle_fountain.cl">
+      <Filter>Resource Files\FX Kernels</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Cube.mtl">
+      <Filter>Resource Files\Models</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Mars.mtl">
+      <Filter>Resource Files\Models</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Cube.obj">
+      <Filter>Resource Files\Models</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Mars.obj">
+      <Filter>Resource Files\Models</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Particle1.mtl">
+      <Filter>Resource Files\Models</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\MarsElevation_2500x1250.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\MarsMap_2500x1250.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_negx.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_negy.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_negz.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_posy.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_posx.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\mountain_posz.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Scripts\camera_anim.lua">
+      <Filter>Resource Files\Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Scripts\particle_fountain.lua">
+      <Filter>Resource Files\Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\Basic.shader">
+      <Filter>Resource Files\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\BasicParticle.shader">
+      <Filter>Resource Files\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\CubeMapReflection.shader">
+      <Filter>Resource Files\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\Flat.shader">
+      <Filter>Resource Files\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\SkyBox.shader">
+      <Filter>Resource Files\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Shaders\UIShader.shader">
+      <Filter>Resource Files\Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Textures\marble_texture4662.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Marble.mtl">
+      <Filter>Resource Files\Models</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Models\Marble.obj">
+      <Filter>Resource Files\Models</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Fonts\Capture_it.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Resources\Fonts\OpenSans-Regular.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Resources\create_dest_tree.bat">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\Resources\Fonts\Cpr.Sparhelt font License.txt">
+      <Filter>Resource Files\Fonts</Filter>
+    </Text>
+    <Text Include="..\..\..\Resources\Fonts\Apache License.txt">
+      <Filter>Resource Files\Fonts</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,18 @@
+[submodule "thirdparty/SDL"]
+	path = thirdparty/SDL
+	url = https://github.com/libsdl-org/SDL.git
+[submodule "thirdparty/stb"]
+	path = thirdparty/stb
+	url = https://github.com/nothings/stb.git
+[submodule "thirdparty/physfs"]
+	path = thirdparty/physfs
+	url = https://github.com/icculus/physfs.git
+[submodule "thirdparty/json"]
+	path = thirdparty/json
+	url = https://github.com/nlohmann/json.git
+[submodule "thirdparty/opencl"]
+	path = thirdparty/opencl
+	url = https://github.com/KhronosGroup/OpenCL-Headers.git
+[submodule ".\\thirdparty\\bullet"]
+	path = .\\thirdparty\\bullet
+	url = https://github.com/bulletphysics/bullet3.git

@@ -4,7 +4,7 @@ Open GL Utility Functions
 
 */
 #include "gl_utils.h"
-#include "Glew/glew.h"
+#include "glew.h"
 #include "Utils/log_manager.h"
 
 namespace NYX

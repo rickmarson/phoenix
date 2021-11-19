@@ -4,12 +4,13 @@
  
  */
 
-#include "Glew/glew.h"
+#include "glew.h"
 
 #if PLATFORM_MAC
 #include <OpenCL/OpenCL.h>
 #else
-#include <CL/opencl.h>
+#define CL_TARGET_OPENCL_VERSION 200
+#include <CL\opencl.h>
 #endif
 
 #include "gl_vertex_buffer.h"
